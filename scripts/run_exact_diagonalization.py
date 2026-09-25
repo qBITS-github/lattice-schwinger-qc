@@ -4,10 +4,10 @@
 
 """Exact-diagonalization datasets for the lattice Schwinger model.
 
-Each section writes one ``.npz`` dataset under ``data/``. ``scripts/visualize.py``
+Each section writes one ``.npz`` dataset under ``data/ED/``. ``visualization/ED.py``
 only loads those files. No figure is produced here.
 
-Run from anywhere: ``python scripts/run.py``. Paths are relative to the
+Run from anywhere: ``python scripts/run_exact_diagonalization.py``. Paths are relative to the
 repository root, not the working directory.
 """
 
@@ -19,7 +19,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 import numpy as np
 
-from schwinger import (
+from schwinger_model import (
     build_hamiltonian,
     chiral_condensate,
     diagonalize,
@@ -33,7 +33,7 @@ from schwinger import (
 
 
 def _write_npz(path, **arrays):
-    """Write one dataset consumed by Figs. 1-7 in ``scripts/visualize.py``."""
+    """Write one dataset consumed by the exact-diagonalization plots in ``visualization/ED.py``."""
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     np.savez(path, **arrays)
@@ -351,7 +351,7 @@ if __name__ == "__main__":
     a = 1.0
     m = 1.0
     g = 1.0
-    data = ROOT / "data"
+    data = ROOT / "data" / "ED"
     eps_quench = (0.5, 1.0, 1.5, 2.0)
     eps_fidelity = (0.5, 1.0, 1.5, 2.0, 2.5, 3.0)
     times = np.linspace(0.0, 12.0, 121)

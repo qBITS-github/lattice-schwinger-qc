@@ -10,7 +10,7 @@ Open a pull request only when a merge into `main` is actually required. That pul
 
 ## General
 
-- Match the code that is already here. `src/schwinger.py` builds the Pauli Hamiltonian and observables, `scripts/run.py` writes the `.npz` datasets, and `scripts/visualize.py` only plots those files.
+- Match the code that is already here. `src/schwinger_model.py` builds the Pauli Hamiltonian and observables, and `scripts/run_exact_diagonalization.py` writes the `.npz` datasets. `visualization/ED.py`, `VQE.py`, `VQD.py`, and `Trotter.py` write `reproduction.png` for the paper figures that use that algorithm. `visualization/overlay.py` writes `overlay.png`.
 - Lattice units stay $a = m = g = 1$ unless a change is explicitly about those parameters. The quench starts from the zero-field ground state.
 - Keep the stagger $(-1)^{n+1}$. Site index $n = 1 \ldots N$ in the paper is Python index $n - 1$. A sign change here moves the exact-diagonalization curves off the paper.
 - A physics or numerics change that affects a published comparison needs the matching note in `docs/` and, when the README states a number, an update there too. State only results that have been recomputed.
