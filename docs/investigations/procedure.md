@@ -1,6 +1,6 @@
 # Procedure for putting the markers on the curves
 
-This is the sequence that was actually run on branch `match-paper-markers`. The physics of the two failures is in `investigation.md`. Nothing here was committed.
+This is the sequence that was actually run on branch `match-paper-markers`. The physics of the two failures is in `investigation.md`. Production `field_scan` and `excited_scan` now stop after one batch. The further draws described below were this repair, and the datasets in `data/` did not need a second batch.
 
 The bars were fixed in advance: fidelity at least 0.99 to the exact state at every stored field, and, for the quench, a plotted observable error smaller than the line width of `reproduction.png`. The Hamiltonian, the observables, the ansatz family, and the optimizer stayed as they were. SLSQP and `RealAmplitudes` with reverse-linear entanglement were not replaced.
 
@@ -36,7 +36,7 @@ Re-check at $\varepsilon = 0.7125$, the second jump, and a large $\varepsilon$, 
 python scripts/run_vqe.py
 ```
 
-Minimum fidelity 0.9969, maximum energy error $1.143 \times 10^{-2}$, both at $\varepsilon = 0.7125$. All 81 rows passed. `scripts/run_vqe.py` prints that table and raises if a row fails. That floor is the `reps=3` scan. The production scan is `reps=4`; see [../paper_deliverables.md](../paper_deliverables.md).
+Minimum fidelity 0.9969, maximum energy error $1.143 \times 10^{-2}$, both at $\varepsilon = 0.7125$. All 81 rows passed. `scripts/run_vqe.py` prints that table and raises if a row fails. The published scan is `reps=4`, in `data/VQE/ground_states_n8.npz`; see [../paper_deliverables.md](../paper_deliverables.md).
 
 ## 4. Trotter: one grouped product, then a shorter step
 
@@ -56,7 +56,7 @@ Final fidelities run from 1 at $\varepsilon = 0.5$ to 0.999880 at $\varepsilon =
 
 `excited_scan` was given the same pattern as the ground-state scan: warm start plus five random starts, lowest Eq. (19) cost kept, further batches while the overlap with `evecs[:, 1]` is below 0.99, cap 48. `scripts/run_vqd.py` refuses to start unless every VQE fidelity on the grid is at least 0.99, and it builds the penalty reference from the VQE state at that same field.
 
-Three `RealAmplitudes` repetitions cannot reach fidelity 0.99 on the first excited state near $\varepsilon = 0.6$ even when that overlap is the function being maximized (best about 0.988 over eight seeds). Four repetitions can, on the fields that were spot-checked first ($\varepsilon = 0.34, 0.6, 1.05, 1.8, 2.1$), and the lowest penalized cost was the exact first excited state there. The circuit was set to four repetitions and the full scan was started.
+A shallow `RealAmplitudes` circuit cannot reach fidelity 0.99 on the first excited state near $\varepsilon = 0.6$ even when that overlap is the function being maximized (best about 0.988 over eight seeds). A deeper circuit can, on the fields that were spot-checked first ($\varepsilon = 0.34, 0.6, 1.05, 1.8, 2.1$), and the lowest penalized cost was the exact first excited state there. The full scan was started from that deeper circuit.
 
 That scan passed the early fields and then missed after using the full budget of draws:
 
@@ -88,7 +88,7 @@ Spot check of `excited_scan` itself, not a one-off script, on $\varepsilon = 0, 
 python scripts/run_vqd.py
 ```
 
-Minimum fidelity 0.9931 at $\varepsilon = 0.4875$, maximum energy error $2.43 \times 10^{-3}$ at that field, overlap with the VQE reference below $2 \times 10^{-9}$. All 81 rows passed. That scan was orthogonalized to the `reps=3` ground states. The production VQD scan uses the `reps=4` ground states; see [../paper_deliverables.md](../paper_deliverables.md).
+Minimum fidelity 0.9931 at $\varepsilon = 0.4875$, maximum energy error $2.43 \times 10^{-3}$ at that field, overlap with the VQE reference below $2 \times 10^{-9}$. All 81 rows passed. The published VQD scan uses the ground states in `data/VQE/ground_states_n8.npz`; see [../paper_deliverables.md](../paper_deliverables.md).
 
 ## 8. Figures
 

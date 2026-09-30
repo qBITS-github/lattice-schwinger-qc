@@ -121,6 +121,8 @@ Term by term:
 
 **Memorization check** (do this until instant): $n=1,\ldots,8 \Rightarrow (-1)^n = -1,+1,-1,+1,-1,+1,-1,+1$. Odd → antiparticle-type, background charge $1$. Even → particle-type, background charge $0$. Nearly every sign bug in an implementation of this model is a staggering mismatch, and this table is the fastest way to catch one by eye.
 
+In these notes $n$ starts at 1, as in the paper, and the stagger is $(-1)^n$. In `src/schwinger_model.py` that site is stored at Python index $n-1$, which starts at 0, and the factor is written $(-1)^{n+1}$. The extra $+1$ is only that zero-based index. It does not change the physics. The mismatch to avoid is using $(-1)^n$ in one term and $(-1)^{n+1}$ in another.
+
 ---
 
 ## 3. Eliminating the electric field — the mechanics section
@@ -160,7 +162,7 @@ Read this as: *boundary field, plus half the sum of (spin value + staggering fla
 | Trap | Symptom | Diagnostic |
 |---|---|---|
 | Off-by-one in the sum bound | $L_1$ comes out as just $\varepsilon$ or skips $\rho_1$ | $L_1$ must contain exactly $\rho_1$, nothing more, nothing less |
-| Wrong sign inside $(-1)^l$ | Using $(-1)^{l+1}$ or $(-1)^n$ | Recompute $\rho_1,\rho_2,\rho_3$ by hand and diff |
+| Mixed stagger | $(-1)^l$ in one term and $(-1)^{l+1}$ in another | Use one exponent everywhere. In the code, $(-1)^{n+1}$ is the zero-based index and does not change the physics |
 | $\varepsilon$ inside vs. outside the sum | Squaring picks up a spurious factor of $n$ on $\varepsilon^2$ | the $\varepsilon^2$ coefficient in every $L_n^2$ must be exactly $1$, never $n^2$ |
 | Dropping the $\tfrac12$ in $\phi^\dagger\phi=(1+\sigma^z)/2$ | $L_n$ comes out integer-valued instead of half-integer | check the all-spins-down, $\varepsilon=0$ state by hand |
 

@@ -269,10 +269,11 @@ def excited_scan(N, a, m, g, eps_values, psi_vqe, n_restarts, seed):
     psi_vqe[i] is ψ0^VQE at eps_values[i], the reference in Eq. (19), and
     it has to already be the ground state. At each field Eq. (19) is
     minimized from the previous parameters and from n_restarts random
-    vectors, and the lowest penalized cost is kept. Further draws are
-    tried while that state is not yet evecs[:, 1]. The first field has
-    no previous parameters. The reported energy is Eq. (20), compared
-    with evals[1] from diagonalize(H, k=2). run_vqd.py writes the scan.
+    vectors, and the lowest penalized cost is kept. The batch size is
+    fixed. Fidelity to evecs[:, 1] is recorded afterwards and does not
+    open another batch. The first field has no previous parameters. The
+    reported energy is Eq. (20), compared with evals[1] from
+    diagonalize(H, k=2). run_vqd.py writes the scan.
     """
     eps_values = np.asarray(eps_values, dtype=float)
     psi_vqe = np.asarray(psi_vqe)
@@ -293,38 +294,26 @@ def excited_scan(N, a, m, g, eps_values, psi_vqe, n_restarts, seed):
         beta = penalty_coefficient(H)
         psi_ref = np.asarray(psi_vqe[i]).reshape(-1)
         # A warm start can stay orthogonal to the reference and still miss
-        # the first excited state, so the lower penalized cost is kept.
-        chosen = None
-        fidelity = 0.0
-        batch = 0
-        n_drawn = 0
-        while chosen is None or (fidelity < 0.99 and n_drawn < 48):
-            if batch == 0 and i == 0:
-                starts = random_parameters(ansatz, n_restarts, seed)
-            elif batch == 0:
-                draws = random_parameters(ansatz, n_restarts, seed + i)
-                starts = np.vstack([theta, draws])
-            else:
-                starts = random_parameters(
-                    ansatz, n_restarts, seed + 10007 * batch + i
-                )
-            batch += 1
-            n_drawn += n_restarts
-            jobs = [
-                (ansatz, H, psi_ref, beta, np.asarray(th, dtype=float))
-                for th in starts
-            ]
-            if len(jobs) == 1:
-                candidates = [_minimized_excited(jobs[0])]
-            else:
-                workers = min(len(jobs), os.cpu_count() or 1)
-                context = mp.get_context("fork")
-                with ProcessPoolExecutor(max_workers=workers, mp_context=context) as pool:
-                    candidates = list(pool.map(_minimized_excited, jobs))
-            challenger = min(candidates, key=lambda candidate: candidate["cost"])
-            if chosen is None or challenger["cost"] < chosen["cost"]:
-                chosen = challenger
-            fidelity = float(np.abs(np.vdot(psi_e1, chosen["psi"])) ** 2)
+        # the first excited state, so the lower penalized cost in this
+        # fixed batch is kept. Fidelity does not open another batch.
+        if i == 0:
+            starts = random_parameters(ansatz, n_restarts, seed)
+        else:
+            draws = random_parameters(ansatz, n_restarts, seed + i)
+            starts = np.vstack([theta, draws])
+        jobs = [
+            (ansatz, H, psi_ref, beta, np.asarray(th, dtype=float))
+            for th in starts
+        ]
+        if len(jobs) == 1:
+            candidates = [_minimized_excited(jobs[0])]
+        else:
+            workers = min(len(jobs), os.cpu_count() or 1)
+            context = mp.get_context("fork")
+            with ProcessPoolExecutor(max_workers=workers, mp_context=context) as pool:
+                candidates = list(pool.map(_minimized_excited, jobs))
+        chosen = min(candidates, key=lambda candidate: candidate["cost"])
+        fidelity = float(np.abs(np.vdot(psi_e1, chosen["psi"])) ** 2)
         theta = chosen["theta"]
         energies[i] = chosen["energy"]
         energies_ed[i] = e1

@@ -111,6 +111,8 @@ This is the origin of the factor $(-1)^n$ that appears throughout:
 
 **Roadmap's memorization check:** for $n=1,2,3,4,5,6,7,8$, $(-1)^n = -1,+1,-1,+1,-1,+1,-1,+1$. Odd $\Rightarrow -1$ (antiparticle-type, "background charge $+1$" needing subtraction), even $\Rightarrow +1$ (particle-type, "background charge $0$"). Internalizing this instantly is a genuine debugging tool: almost every sign bug in this kind of code is a staggering mismatch, and eyeballing "is $n$ odd or even, and does the sign in my code match" catches most of them without running anything.
 
+`src/schwinger_model.py` writes the stagger as $(-1)^{n+1}$ on this same 1-based label. That is $(-1)$ raised to the Python index $n-1$. The extra $+1$ is only because Python indexes from zero. It does not change the physics.
+
 ---
 
 ## 3. Gauss's law elimination (Eqs. 4–6, 11) — [MECHANICS]
@@ -215,7 +217,7 @@ Explicit traps, all of which you now have the derivation needed to check directl
 | Trap | What it looks like | How to catch it |
 |---|---|---|
 | Off-by-one in the cumulative sum | Using $\sum_{l=1}^{n-1}$ instead of $\sum_{l=1}^{n}$ (or vice versa) | Your $L_1$ should contain exactly $\rho_1$ — a sum with the wrong bound will give $L_1 = \varepsilon$ (empty sum) or start from $\rho_2$ |
-| Sign error in $(-1)^l$ | Using $(-1)^{l+1}$ or $(-1)^{n}$ instead of $(-1)^l$ inside the sum | Recompute $\rho_1,\rho_2,\rho_3$ from the table above and diff against your code's output symbolically |
+| Mixed stagger | Using $(-1)^l$ in one term and $(-1)^{l+1}$ in another | Keep a single exponent. In the code, $(-1)^{n+1}$ is the zero-based index and does not change the physics |
 | $\varepsilon$ placed inside vs. outside the sum before squaring | $\left[\sum_l(\ldots+\varepsilon)\right]^2$ instead of $\left[\varepsilon + \sum_l(\ldots)\right]^2$ | These differ by a factor of $n$ multiplying $\varepsilon$ inside the bracket — compare the $\varepsilon^2$ coefficient of each $L_n^2$ term: it must always be exactly $1\cdot\varepsilon^2$, never $n^2\varepsilon^2$ |
 | Forgetting the $\tfrac12$ from $\sigma^z\to$ occupation number | Using $\phi_n^\dagger\phi_n = \sigma_n^z$ instead of $(1+\sigma_n^z)/2$ | Check the $N=4$, $\varepsilon=0$, all-spins-down state: it should have $L_n = -n/2$-ish structure (specific numbers per the table above), not integer-valued $L_n$ |
 

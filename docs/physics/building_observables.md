@@ -73,16 +73,18 @@ $$
 $$
 
 
+The formulas above are the paper's, with sites labeled $n = 1 \ldots N$ and stagger $(-1)^n$. `src/schwinger_model.py` stores site $n$ at Python index $n-1$. Its factor is $(-1)^{n+1}$, which is $(-1)$ raised to that index. The extra $+1$ is only because Python indexes from zero, and it does not change the physics. The same factor is used for every staggered observable.
+
 ## Implementing the observables
 
 **1. Chiral condensate**
-Loop over each site $n$, compute the expectation value $\langle\sigma^z_n\rangle$ by sandwiching the operator between $\langle\psi|$ and $|\psi\rangle$, multiply by the staggering sign $(-1)^n$, and sum. Divide the total by $2Na$ at the end.
+Loop over each site $n$, compute the expectation value $\langle\sigma^z_n\rangle$ by sandwiching the operator between $\langle\psi|$ and $|\psi\rangle$, multiply by the stagger $(-1)^{n+1}$ (the zero-based index; see above), and sum. Divide the total by $2Na$ at the end.
 
 **2. Total charge**
-Same site-by-site pattern as above: compute $\langle\sigma^z_n\rangle$ at each site, add $(-1)^n$, sum over all sites, divide by 2 at the end. Implemented independently rather than reusing another function.
+Same site-by-site pattern as above: compute $\langle\sigma^z_n\rangle$ at each site, add $(-1)^{n+1}$, sum over all sites, divide by 2 at the end. Implemented independently rather than reusing another function. The exponent is the zero-based index and does not change the physics.
 
 **3. Local charge**
-Also the same per-site pattern, but instead of summing everything into one number, each site's value $q_n = \tfrac12(\langle\sigma^z_n\rangle+(-1)^n)$ is kept separately and returned as an array. This is the building block the next observable uses.
+Also the same per-site pattern, but instead of summing everything into one number, each site's value $q_n = \tfrac12(\langle\sigma^z_n\rangle+(-1)^{n+1})$ is kept separately and returned as an array. This is the building block the next observable uses. The exponent is the zero-based index and does not change the physics.
 
 **4. Spatial point charge**
 Calls the local charge function above to get every $q_n$, then pairs up neighboring sites (one physical point = two adjacent staggered sites) by adding consecutive entries together.

@@ -26,7 +26,7 @@ Most of Section II only needs intuition tier. One step needs mechanics tier, bec
 
 ### 2. Lattice discretization — intuition tier
 
-**What to know:** matter fields live on discrete sites; the gauge field lives on the links between sites. Kogut-Susskind "staggered fermions" specifically means alternating sites represent particle/antiparticle-type degrees of freedom via a sign pattern, `(-1)^n` — this is why you'll see that factor throughout the Hamiltonian (Eq. 3, 10).
+**What to know:** matter fields live on discrete sites; the gauge field lives on the links between sites. Kogut-Susskind "staggered fermions" specifically means alternating sites represent particle/antiparticle-type degrees of freedom via a sign pattern, `(-1)^n` — this is why you'll see that factor throughout the Hamiltonian (Eq. 3, 10). In `src/schwinger_model.py` the same factor is written `(-1)^{n+1}` because the array index starts at 0. That offset does not change the physics.
 
 **Exercise:** draw (literally, on paper) a row of 8 dots with links between them, labeling which sites carry `+` and which carry `-` in the staggered sign convention, and mark where the gauge field variables `U_n` sit.
 

@@ -8,7 +8,7 @@
 | --- | --- | --- |
 | Lattice | $N=8$ (main), open BC; $a=m=g=1$ | same |
 | Ground / excited | VQE; VQD with overlap penalty. Paper does not state `reps`. | `RealAmplitudes`, `reverse_linear`, statevector. VQE Table I and Fig. 1 scan `reps=4`. VQD `reps=10`, orthogonalized to those `reps=4` ground states. |
-| Optimizer | SLSQP. Paper does not state `ftol`, `maxiter`, or restarts. | SLSQP. VQE: `ftol=1e-12`, `maxiter=5000`. Table I: 10 restarts, `seed=42`, `draw_seed=4042`, winning restart index 7. Fig. 1 VQE and VQD: warm start + 5 random restarts/point (`seed=42`); further draws only while $F<0.99$ (cap 48). No extra batches were needed. |
+| Optimizer | SLSQP. Paper does not state `ftol`, `maxiter`, or restarts. | SLSQP. VQE: `ftol=1e-12`, `maxiter=5000`. Table I: 10 restarts, `seed=42`, `draw_seed=4042`, winning restart index 7 (`restart_energies` in `data/VQE/table1_n8.npz`). Fig. 1 VQE and VQD: one batch per point, warm start plus 5 random restarts (`seed=42`). The files in `data/` are that batch. Fidelity is recorded after the scan and does not open another batch. |
 | ED | exact diagonalization | full $2^N$ after Gauss-law elimination; `eigsh` `which="SA"` (dense `eigh` for quench evolution). Fig. 2: $N=8,10,12,14,16,18$, coarse `linspace(0,1.5,30)`, bisection `tol=1e-4`. |
 | Quench | $\varepsilon=0$ vacuum → field; 2nd-order Trotter, $\Delta t=0.1$, $t/a\in[0,12]$ | same 121-point grid. Trotter `order=2`, `dt=0.1`, internal `reps=14` (paper does not state `reps`). Initial state is the ED vacuum. |
 
@@ -53,7 +53,7 @@ Condensate-jump midpoints (ED): $\varepsilon\approx 0.69375$, $1.78125$.
 
 ## Critical field $\varepsilon_c$ vs $1/N$ (Fig. 2)
 
-Config: $a=m=g=1$, open BC, full $2^N$ sparse `eigsh` (no sector cut). $\varepsilon_c$ = bisection of the condensate jump, `tol=1e-4`, after `linspace(0,1.5,30)`. At the jump, $Q=0$ below $\varepsilon_c$ and $Q=-1$ above. Paper does not state the grid or the tolerance.
+Config: $a=m=g=1$, open BC, full $2^N$ sparse `eigsh` (no sector cut). $\varepsilon_c$ = bisection of the condensate jump, `tol=1e-4`, after `linspace(0,1.5,30)`. `data/ED/critical_field_scaling.npz` stores the condensate and $\varepsilon_c$. Paper does not state the grid or the tolerance.
 
 | $N$ | $1/N$ | Paper $\varepsilon_c$ | Project $\varepsilon_c$ |
 | ---: | ---: | ---: | ---: |
@@ -90,11 +90,16 @@ Trotter $\max\|Q_N\|\sim 3.3\times10^{-16}$.
 
 | $\varepsilon$ | Paper | Project min Trotter–ED fidelity on $[0,12]$ |
 | ---: | --- | ---: |
-| $0.5$–$1.0$ | near unity / slower decay | $1.000000$ |
-| $1.5$ | faster departure | $0.999998$ |
-| $2.0$ | faster departure | $0.999983$ |
-| $2.5$ | strong-field | $0.999930$ |
-| $3.0$ | strongest | $0.999880$; ED $\min P_{\mathrm{vac}}\sim 3\times10^{-7}$ |
+| $0.5$ | near unity / slower decay | $1.00000000$ |
+| $1.0$ | near unity / slower decay | $0.99999981$ |
+| $1.5$ | faster departure | $0.99999816$ |
+| $2.0$ | faster departure | $0.99998307$ |
+| $2.5$ | strong-field | $0.99992999$ |
+| $3.0$ | strongest | $0.99988039$; ED $\min P_{\mathrm{vac}} = 3.028\times10^{-7}$ |
+
+These fidelities are `min` over time in `data/Trotter/quench_n8.npz` (`reps=14`). The exact $P_{\mathrm{vac}}$ minimum is from `data/ED/vacuum_fidelity_n8.npz`.
+
+One symmetric product at the paper's $\Delta t = 0.1$, measured while choosing `reps` and recorded in [investigations/investigation.md](investigations/investigation.md), had final-time fidelity $0.9999$, $0.994$, $0.948$, $0.621$, $0.096$, and $0.038$ at $\varepsilon = 0.5, 1, 1.5, 2, 2.5, 3$. At $\varepsilon = 3$ the fidelity along that quench fell to $0.010$. That single-product trajectory is not in `data/Trotter/`; the stored quench is the 14-fold product.
 
 ---
 
@@ -109,7 +114,7 @@ Trotter $\max\|Q_N\|\sim 3.3\times10^{-16}$.
 | $2.5$ | not tabulated | $0.664476$ |
 | $3.0$ | not tabulated | $0.917994$ |
 
-Paper: $\gamma_{\mathrm{eff}}$ increases monotonically with $\varepsilon$. Project slope of $\gamma_{\mathrm{eff}}$ vs $\varepsilon$ $\approx 0.357$.
+Paper: $\gamma_{\mathrm{eff}}$ increases monotonically with $\varepsilon$. From `data/ED/decay_rate_n8.npz`, the slope of $\gamma_{\mathrm{eff}}$ versus $\varepsilon$ is $0.357187$.
 
 ---
 
@@ -119,3 +124,25 @@ Paper: $\gamma_{\mathrm{eff}}$ increases monotonically with $\varepsilon$. Proje
 | --- | --- | --- |
 | Figs. 4–5, 8 ($Q_i$, $H_E$, $q_n$; $N=8$) | curves only | ED series stored; no separate numeric table |
 | Figs. 9–11 ($N=12$ dynamics) | shown | not computed |
+
+---
+
+## Overlay residuals
+
+Maximum $|y_{\mathrm{ED}} - y_{\mathrm{paper}}|$ after reading the published SVG strokes with `visualization/overlay.py` and interpolating the current `data/ED/` curves onto those strokes. Fig. 2 compares $\varepsilon_c$ with the digitized markers. Fig. 1's raw maximum sits on the vertical stroke at a condensate jump. Away from $0.08$ of either jump ($\varepsilon \approx 0.69$ and $\varepsilon \approx 1.78$), the condensate residual is $1\times10^{-5}$ and the $E_0$ residual is $1.1\times10^{-3}$. The $E_1$ residual away from those jumps is $2.2\times10^{-2}$, at $\varepsilon = 0.80$ on the digitized stroke.
+
+| Figure | Quantity | max $\|{\mathrm{ED}} - {\mathrm{paper}}\|$ |
+| --- | --- | ---: |
+| 1 | condensate | $8.0\times10^{-2}$ (at the jump) |
+| 1 | $E_0$ | $4.5\times10^{-2}$ (at the jump) |
+| 1 | $E_1$ | $4.7\times10^{-2}$ (at the jump) |
+| 2 | $\varepsilon_c$ marker | $2.1\times10^{-5}$ |
+| 3 | $Q_N$ and $\Delta E$ | $2.7\times10^{-6}$ |
+| 4 | $Q_i$ | $8.6\times10^{-5}$ |
+| 5 | $H_E$ | $2.2\times10^{-4}$ |
+| 6 | $P_{\mathrm{vac}}$ | $1.1\times10^{-4}$ |
+| 7 | $\gamma_{\mathrm{eff}}$ | $3.0\times10^{-5}$ |
+| 8 | $q_n$ | $2.6\times10^{-4}$ |
+
+The Fig. 2 paper column above matches these SVG markers. The largest marker residual is $N = 10$.
+
