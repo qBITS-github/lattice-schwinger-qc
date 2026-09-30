@@ -13,7 +13,7 @@ Read `README.md`, `docs/investigations/matching_paper_figures.md`, `docs/reprodu
 - `excited_scan` drew random starts only at the first field, then warm-started.
 - The Trotter step was `SuzukiTrotter(order=2, reps=1)` on all 44 Pauli strings, at the stored $\Delta t = 0.1$.
 
-The existing `data/VQE`, `data/VQD`, and `data/Trotter` files were read before they were overwritten. Those are the “before” numbers in `investigation.md`.
+The existing VQE, VQD, and Trotter results were read before they were overwritten. Those are the “before” numbers in `investigation.md`.
 
 ## 2. Locate the fields that fail
 
@@ -36,7 +36,7 @@ Re-check at $\varepsilon = 0.7125$, the second jump, and a large $\varepsilon$, 
 python scripts/run_vqe.py
 ```
 
-Minimum fidelity 0.9969, maximum energy error $1.143 \times 10^{-2}$, both at $\varepsilon = 0.7125$. All 81 rows passed. `scripts/run_vqe.py` prints that table and raises if a row fails.
+Minimum fidelity 0.9969, maximum energy error $1.143 \times 10^{-2}$, both at $\varepsilon = 0.7125$. All 81 rows passed. `scripts/run_vqe.py` prints that table and raises if a row fails. That floor is the `reps=3` scan. The production scan is `reps=4`; see [../paper_deliverables.md](../paper_deliverables.md).
 
 ## 4. Trotter: one grouped product, then a shorter step
 
@@ -88,7 +88,7 @@ Spot check of `excited_scan` itself, not a one-off script, on $\varepsilon = 0, 
 python scripts/run_vqd.py
 ```
 
-Minimum fidelity 0.9931 at $\varepsilon = 0.4875$, maximum energy error $2.43 \times 10^{-3}$ at that field, overlap with the VQE reference below $2 \times 10^{-9}$. All 81 rows passed.
+Minimum fidelity 0.9931 at $\varepsilon = 0.4875$, maximum energy error $2.43 \times 10^{-3}$ at that field, overlap with the VQE reference below $2 \times 10^{-9}$. All 81 rows passed. That scan was orthogonalized to the `reps=3` ground states. The production VQD scan uses the `reps=4` ground states; see [../paper_deliverables.md](../paper_deliverables.md).
 
 ## 8. Figures
 

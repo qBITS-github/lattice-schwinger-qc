@@ -14,6 +14,6 @@ Open a pull request only when a merge into `main` is actually required. That pul
 - Lattice units stay $a = m = g = 1$ unless a change is explicitly about those parameters. The quench starts from the zero-field ground state.
 - Keep the stagger $(-1)^{n+1}$. Site index $n = 1 \ldots N$ in the paper is Python index $n - 1$. A sign change here moves the exact-diagonalization curves off the paper.
 - A physics or numerics change that affects a published comparison needs the matching note in `docs/` and, when the README states a number, an update there too. State only results that have been recomputed.
-- Leave Appendix A, VQE, VQD, Trotter, tensor networks, and hardware runs out of result claims until they exist in the repository. The README's Research Status section is the boundary.
-- Do not commit `__pycache__/`, `figures/archived/`, or `data/archived/`. Those paths are gitignored.
+- Appendix A, tensor networks, and hardware runs stay out of result claims until they exist. VQE, VQD, Trotter, and the Fig. 2 critical field through $N = 18$ are part of the results. When those numbers change, update the README and `docs/paper_deliverables.md`. The README's Research Status section is the boundary.
+- Do not commit `__pycache__/` or `figures/archived/`. Those paths are gitignored.
 - Keep commits focused. One change of physics, one dataset, or one doc correction is easier to review than a mixed push.
