@@ -6,6 +6,12 @@ and writes ``data/VQE/``.
 Run from anywhere: ``python scripts/run_vqe.py``.
 """
 
+import os
+
+os.environ["OMP_NUM_THREADS"] = "1"
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+os.environ["MKL_NUM_THREADS"] = "1"
+
 import sys
 from pathlib import Path
 
@@ -22,6 +28,21 @@ from vqe import (
     relative_energy_error,
     trial_ansatz,
 )
+
+
+def _print_result_table(eps, fidelity, error, error_name):
+    """Print ε, fidelity, energy error, and pass/fail against fidelity 0.99.
+
+    run_vqe.py calls this on the Fig. 1 ground-state scan. Pass means the
+    stored state overlaps evecs[:, 0] at that ε by at least 0.99.
+    """
+    print(f"{'eps':>8}  {'fidelity':>10}  {error_name:>14}  result")
+    failed = False
+    for e, f, err in zip(eps, fidelity, error):
+        ok = float(f) >= 0.99
+        failed = failed or not ok
+        print(f"{float(e):8.4f}  {float(f):10.6f}  {float(err):14.3e}  {'pass' if ok else 'fail'}")
+    return failed
 
 
 def main():
@@ -75,9 +96,9 @@ def main():
     )
     print(f"    saved {table_path}")
 
-    print("Fig. 1 ground states, warm-started (ψ0^VQE for Eq. (19))...")
+    print("Fig. 1 ground states, warm start plus random restarts...")
     energies, energies_ed, fidelities, thetas, psis = field_scan(
-        ansatz, best["theta"], eps_values, N, a, m, g
+        ansatz, best["theta"], eps_values, N, a, m, g, n_restarts, seed
     )
     scan_path = out_dir / "ground_states_n8.npz"
     np.savez(
@@ -95,8 +116,12 @@ def main():
         psi_vqe=psis,
     )
     print(f"    saved {scan_path}")
-    print(f"    max |E_VQE - E0_ED| = {np.max(np.abs(energies - energies_ed)):.3e}")
+    energy_error = np.abs(energies - energies_ed)
+    print(f"    max |E_VQE - E0_ED| = {np.max(energy_error):.3e}")
     print(f"    min fidelity = {float(fidelities.min()):.4f}")
+    failed = _print_result_table(eps_values, fidelities, energy_error, "energy_error")
+    if failed:
+        raise RuntimeError("Fig. 1 ground-state fidelity fell below 0.99.")
 
 
 if __name__ == "__main__":

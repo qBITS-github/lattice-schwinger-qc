@@ -1,8 +1,10 @@
-# Matching the paper's figures
+# Hypothesis before the fix
 
-The exact-diagonalization curves already sit on the published figures. The markers that leave those curves are the VQE and VQD field scan, and the second-order Trotter quench at the paper's stated step $\Delta t = 0.1$.
+This note is the hypothesis written before the VQE, VQD, and Trotter markers were put on the exact curves. It is not the current result. The repair is in [investigation.md](investigation.md).
 
-Lattice units are $a = m = g = 1$, $N = 8$. The numbers below are from the current runs in `data/VQE/`, `data/VQD/`, and `data/Trotter/`.
+The exact-diagonalization curves already sat on the published figures. In the runs this note was written from, the markers that left those curves were the VQE and VQD field scan, and the second-order Trotter quench at the paper's stated step $\Delta t = 0.1$.
+
+Lattice units are $a = m = g = 1$, $N = 8$. The numbers below are from those earlier runs in `data/VQE/`, `data/VQD/`, and `data/Trotter/`.
 
 ## Fig. 1
 

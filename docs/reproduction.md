@@ -37,4 +37,4 @@ python visualization/Trotter.py  # Figs. 3–8
 python visualization/overlay.py  # every overlay
 ```
 
-Figs. 9–11 are the $N = 12$ appendix and are not produced. Where the markers leave the exact curves, and what to change, is in [matching_paper_figures.md](matching_paper_figures.md).
+Figs. 9–11 are the $N = 12$ appendix and are not produced.
