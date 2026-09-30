@@ -56,6 +56,10 @@ $$
 
 So, $H_{\mathrm{kin}}$ is the only genuinely "quantum" component here since it forces superpositions.
 
+## Site index
+
+The sums above use the paper's label $n = 1 \ldots N$, and the printed stagger is $(-1)^n$. Arrays in `src/schwinger_model.py` start at 0. The code's factor on that same label is $(-1)^{n+1}$, which is $(-1)$ raised to the Python index $n-1$. The extra $+1$ is only because Python indexes from zero. The mass, the Gauss law, and the charge observables all use this one factor. The offset does not change the physics.
+
 ## Setting up the simulation
 
 We first create the Pauli spin matrices acting on one qubit.
@@ -107,7 +111,7 @@ We then build the entire N-qubit operator i.e. the matrix representation of $\si
 
 ### 2. Mass term:
 - Loop over all N sites
-- Multiply $\sigma_n^{z}$ by the scalar coefficient $\frac{m}{2}(-1)^n$
+- Multiply $\sigma_n^{z}$ by $\frac{m}{2}(-1)^{n+1}$. On the paper's label $n$ that is the zero-based index, as in the site-index note above. It does not change the physics.
 - Get $H_m$
 
 ### 3. Electric Field term:

@@ -206,9 +206,9 @@ def field_scan(
     Eq. (18) at each stored ε. ε = 0 is the Table I vector and is not
     optimized again. At each later field the previous parameters and
     n_restarts random vectors are minimized, and the lowest energy is kept.
-    Further random draws are tried while that energy is still not the ground
-    state. run_vqe.py writes these states. run_vqd.py loads them as the
-    orthogonality reference in Eq. (19).
+    The batch size is fixed. Fidelity to the exact ground state is recorded
+    afterwards and does not open another batch. run_vqe.py writes these
+    states. run_vqd.py loads them as the orthogonality reference in Eq. (19).
     """
     n_eps = len(eps_values)
     dim = 2 ** N
@@ -225,26 +225,13 @@ def field_scan(
             energy = float(np.real(np.vdot(psi, H @ psi)))
         else:
             # The warm start stays in the old vacuum across a first-order jump.
-            # Most restarts stop in a higher minimum of the new vacuum, so
-            # another draw is kept when its energy is lower.
-            best = None
-            batch = 0
-            n_drawn = 0
-            while best is None or (best["fidelity"] < 0.99 and n_drawn < 48):
-                if batch == 0:
-                    draws = random_parameters(ansatz, n_restarts, seed + i)
-                    initial_points = np.vstack([theta, draws])
-                else:
-                    initial_points = random_parameters(
-                        ansatz, n_restarts, seed + 10007 * batch + i
-                    )
-                batch += 1
-                n_drawn += n_restarts
-                candidate, _restart_energies = best_restart(
-                    ansatz, H, psi_ed, initial_points, maxiter=maxiter, ftol=ftol
-                )
-                if best is None or candidate["energy"] < best["energy"]:
-                    best = candidate
+            # The lowest energy among that start and n_restarts random starts
+            # is kept. Fidelity is not used to draw further starts.
+            draws = random_parameters(ansatz, n_restarts, seed + i)
+            initial_points = np.vstack([theta, draws])
+            best, _restart_energies = best_restart(
+                ansatz, H, psi_ed, initial_points, maxiter=maxiter, ftol=ftol
+            )
             theta = best["theta"]
             psi = best["psi"]
             energy = best["energy"]

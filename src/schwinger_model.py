@@ -8,17 +8,15 @@ built directly in the qubit/Pauli representation of Eqs. (8)-(11):
     H_m   = (m/2)  * sum_{n=1}^{N}   (-1)^{n+1} Z_n
     H_E   = (g^2 a/2) * sum_{n=1}^{N-1} [ eps + (1/2) sum_{l=1}^{n} (Z_l + (-1)^{l+1}) ]^2
 
-Site indices n = 1..N in the paper <-> python indices idx = 0..N-1 (idx = n-1).
-No Jordan-Wigner transformation needs to be done by hand -- the paper already
-expresses H purely in terms of single- and two-qubit Pauli operators.
+Site indices n = 1..N in the paper correspond to Python indices idx = 0..N-1
+(idx = n - 1). No Jordan-Wigner transformation needs to be done by hand -- the
+paper already expresses H purely in terms of single- and two-qubit Pauli
+operators.
 
-The paper's Eqs. (10)-(13) and (17) write the stagger as (-1)^n. With that
-sign, a quench from the zero-field vacuum does not separate charge (Fig. 4
-stays flat) and E_0(ε) misses Fig. 1. The sign (-1)^{n+1} is the stagger of a
-zero-based site index, applied in the mass, the Gauss law, and every charge
-observable. At ε = 0 it is equivalent to Z_n -> -Z_n, so the Table I energy
-is unchanged. At ε > 0 it is the relative sign between the boundary field and
-the staggered charge that reproduces the ED curves in Figs. 1, 4, 5, and 8.
+The stagger in this file is (-1) raised to the Python index. On the paper's
+1-based label that is (-1)^{n+1}. The extra +1 is only because Python indexes
+from zero. The mass, the Gauss law, and every charge observable use this same
+factor. The offset does not change the physics.
 """
 
 import numpy as np
@@ -32,7 +30,12 @@ SZ = sparse.csr_matrix([[1, 0], [0, -1]], dtype=complex)
 
 
 def stagger(n):
-    """(-1)^{n+1} for 1-based site n. See the module docstring."""
+    """Stagger on the paper's 1-based site n.
+
+    The Python index is n - 1 and starts at 0, so the factor is (-1)**(n - 1),
+    written here as (-1)**(n + 1). The offset is that zero-based index. It
+    does not change the physics.
+    """
     return (-1) ** (n + 1)
 
 
@@ -104,7 +107,7 @@ def diagonalize(H, k=None):
 
 
 def chiral_condensate(psi, N, a=1.0):
-    """Gamma = (1/(2N a)) sum_n (-1)^{n+1} <Z_n>, Eq. (17) with the stagger of stagger()."""
+    """Gamma = (1/(2N a)) sum_n (-1)^{n+1} <Z_n>. The exponent is stagger()."""
     val = 0.0
     for idx in range(N):
         n = idx + 1
@@ -115,7 +118,7 @@ def chiral_condensate(psi, N, a=1.0):
 
 
 def total_charge(psi, N):
-    """Q_N = (1/2) sum_n (Z_n + (-1)^{n+1}), Eq. (12) with the stagger of stagger()."""
+    """Q_N = (1/2) sum_n (Z_n + (-1)^{n+1}). The exponent is stagger()."""
     val = 0.0
     for idx in range(N):
         n = idx + 1
@@ -127,8 +130,8 @@ def total_charge(psi, N):
 
 def local_charge(psi, N):
     """
-    q_n(t) = (1/2)(<Z_n> + (-1)^{n+1}), Eq. (13) with the stagger of stagger() -- the staggered-site charge
-    density, site by site. Returns array of length N (index idx = n-1).
+    q_n(t) = (1/2)(<Z_n> + (-1)^{n+1}), with the exponent from stagger().
+    Returns the staggered-site charge density, length N (index idx = n - 1).
     """
     q = np.zeros(N)
     for idx in range(N):

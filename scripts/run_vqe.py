@@ -26,7 +26,6 @@ from vqe import (
     field_scan,
     random_parameters,
     relative_energy_error,
-    state_fidelity,
     trial_ansatz,
 )
 
@@ -34,8 +33,7 @@ from vqe import (
 REPS = 4
 MAXITER = 5000
 FTOL = 1e-12
-# Warm start plus this many random draws per field (same batch size as the
-# previous production scan). Extra batches still open while F < 0.99.
+# Warm start plus this many random draws per field. The batch size is fixed.
 N_RESTARTS = 5
 SEED = 42
 # Table I investigation draw seed that produced the stored best (reps=4).
@@ -56,28 +54,6 @@ def _print_result_table(eps, fidelity, error, error_name):
         failed = failed or not ok
         print(f"{float(e):8.4f}  {float(f):10.6f}  {float(err):14.3e}  {'pass' if ok else 'fail'}")
     return failed
-
-
-def _load_existing_table1(path):
-    """Return saved Table I payloads when the file is present and usable."""
-    if not path.is_file():
-        return None
-    with np.load(path, allow_pickle=False) as data:
-        return {
-            "energy": float(data["E_vqe"]),
-            "energy_ed": float(data["E0_ed"]),
-            "fidelity": float(data["fidelity"]),
-            "relative_error": float(data["relative_error"]),
-            "theta": np.array(data["theta"], dtype=float),
-            "psi": np.array(data["psi_vqe"]),
-            "psi_ed": np.array(data["psi_ed"]),
-            "reps": int(data["reps"]) if "reps" in data.files else None,
-            "restart_energies": (
-                np.array(data["restart_energies"], dtype=float)
-                if "restart_energies" in data.files
-                else None
-            ),
-        }
 
 
 def main():
@@ -103,34 +79,10 @@ def main():
     )
     print(f"    ED E0 = {energy_ed:.8f}")
 
-    existing = _load_existing_table1(table_path)
     initial_points = random_parameters(ansatz, TABLE1_N_RESTARTS, TABLE1_DRAW_SEED)
     best, restart_energies = best_restart(
         ansatz, _H0, psi_ed, initial_points, maxiter=MAXITER, ftol=FTOL
     )
-    if (
-        existing is not None
-        and existing["reps"] == REPS
-        and existing["theta"].shape == best["theta"].shape
-        and existing["energy"] < best["energy"]
-    ):
-        print(
-            f"    keeping saved Table I energy {existing['energy']:.12f} "
-            f"(fresh best was {best['energy']:.12f})"
-        )
-        best = {
-            "energy": existing["energy"],
-            "theta": existing["theta"],
-            "psi": existing["psi"],
-            "fidelity": existing["fidelity"],
-        }
-        if existing["restart_energies"] is not None:
-            restart_energies = existing["restart_energies"]
-        # Recompute fidelity against this run's ED vector for consistency.
-        best["fidelity"] = state_fidelity(best["psi"], psi_ed)
-        best["energy"] = float(
-            np.real(np.vdot(best["psi"], _H0 @ best["psi"]))
-        )
 
     rel = relative_energy_error(best["energy"], energy_ed)
     print(f"    best E_VQE = {best['energy']:.12f}")

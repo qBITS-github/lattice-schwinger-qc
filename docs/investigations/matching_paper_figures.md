@@ -8,7 +8,7 @@ Lattice units are $a = m = g = 1$, $N = 8$. The numbers below are from those ear
 
 ## Fig. 1
 
-`RealAmplitudes` with three repetitions already represents both ends of the scan. The ground-state fidelity is $0.9996$ at $\varepsilon = 0$ and $0.9999$ at $\varepsilon = 3$. The first excited state is essentially exact for $\varepsilon \ge 2.55$.
+A shallow `RealAmplitudes` circuit already represents both ends of the scan. The ground-state fidelity is $0.9996$ at $\varepsilon = 0$ and $0.9999$ at $\varepsilon = 3$. The first excited state is essentially exact for $\varepsilon \ge 2.55$.
 
 The ground-state markers leave the curve only at the two first-order jumps. Fidelity is $0$ at $\varepsilon \approx 0.71$, and again from $\varepsilon = 1.80$ to $1.99$, where the energy sits as much as $0.75$ above the exact ground state. `field_scan` carries one parameter vector forward and runs a single SLSQP minimization. Across those jumps the ground state changes to an orthogonal vacuum, and that local minimization stays in the old basin.
 
