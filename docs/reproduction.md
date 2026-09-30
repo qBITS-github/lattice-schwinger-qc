@@ -1,18 +1,20 @@
 # Reproducing the datasets and figures
 
-`data/` and `figures/` are not in the repository. Generate them from the repo root. The scripts find their own paths, so the working directory can be anywhere.
+Numerical results and `figures/` are generated locally and are not in the repository. Generate them from the repo root. The scripts find their own paths, so the working directory can be anywhere.
 
 The runs need NumPy, SciPy, Matplotlib, Qiskit, and `qiskit-algorithms`.
 
 ## Datasets
 
-Exact diagonalization first. It writes `data/ED/` for Figs. 1–8, including the critical-field scan through $N = 16$. This is the long run.
+Exact diagonalization first. It writes the exact results for Figs. 1–8, including the critical-field scan at $N = 8, 10, 12, 14, 16, 18$. $N = 18$ makes this the long run.
 
 ```bash
 python scripts/run_exact_diagonalization.py
 ```
 
-VQE writes `data/VQE/` (Table I at $\varepsilon = 0$, then the Fig. 1 ground-state scan). VQD reads that file and writes `data/VQD/`. Trotter does not need either; it writes `data/Trotter/`.
+VQE writes Table I at $\varepsilon = 0$, then the Fig. 1 ground-state scan (`RealAmplitudes` `reps=4`, SLSQP `ftol=1e-12`, `maxiter=5000`, set in `scripts/run_vqe.py`). VQD reads that scan and writes the first-excited states (`reps=10` in `src/vqd.py`). Trotter does not need either; it writes the quench trajectories (`order=2`, fourteen products inside each stored $\Delta t = 0.1$).
+
+The comparison against the paper is [paper_deliverables.md](paper_deliverables.md). Run VQD after VQE: it uses the ground states that script just wrote.
 
 ```bash
 python scripts/run_vqe.py

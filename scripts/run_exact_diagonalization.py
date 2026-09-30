@@ -1,7 +1,3 @@
-# NOTE: Table I and all "QC" / VQE / VQD / Trotter markers from
-# Chen, Cheng & Guo (arXiv:2607.02894) are intentionally NOT reproduced.
-# This pipeline is exact-diagonalization only.
-
 """Exact-diagonalization datasets for the lattice Schwinger model.
 
 Each section writes one ``.npz`` dataset under ``data/ED/``. ``visualization/ED.py``
@@ -343,10 +339,6 @@ def effective_decay_rate(fid_path, a, out_path, t_over_a_min=0.0, t_over_a_max=1
 
 
 if __name__ == "__main__":
-    print(
-        "NOTE: Table I and all QC/VQE/VQD/Trotter markers from the paper "
-        "are not reproduced; this pipeline is exact diagonalization only."
-    )
     N = 8
     a = 1.0
     m = 1.0
@@ -367,9 +359,9 @@ if __name__ == "__main__":
         out_path=data / "condensate_spectrum_n8.npz",
     )
 
-    print("[2/7] Finite-size critical field scaling (N=8,10,12...)...")
+    print("[2/7] Finite-size critical field scaling (N=8,10,12,...,18)...")
     critical_field_scaling(
-        N_values=(8, 10, 12, 14, 16),
+        N_values=(8, 10, 12, 14, 16, 18),
         a=a,
         m=m,
         g=g,

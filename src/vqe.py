@@ -43,17 +43,19 @@ def ed_ground_pair(N, a, m, g, eps):
     return H, float(evals[0]), np.asarray(evecs[:, 0]).reshape(-1)
 
 
-def trial_ansatz(num_qubits):
+def trial_ansatz(num_qubits, reps=None):
     """RealAmplitudes trial state ψ(θ) in Eq. (18).
 
     Section III.B names this ansatz and does not set repetitions or the
-    entanglement pattern. This is the Qiskit class with those arguments
-    omitted: reps=3, entanglement='reverse_linear', parameter bounds (−π, π).
+    entanglement pattern. With reps omitted this is the Qiskit class default:
+    reps=3, entanglement='reverse_linear', parameter bounds (−π, π).
     qiskit_algorithms.VQE reads those bounds in validate_bounds and
     validate_initial_point. The statevector is in the same basis as evecs
     from diagonalize(), so Table I's overlap needs no reordering.
     """
-    return RealAmplitudes(num_qubits)
+    if reps is None:
+        return RealAmplitudes(num_qubits)
+    return RealAmplitudes(num_qubits, reps=reps)
 
 
 def trial_statevector(ansatz, theta):
@@ -100,21 +102,21 @@ def relative_energy_error(energy, energy_ed):
     return float(abs(energy - energy_ed) / abs(energy_ed))
 
 
-def minimize_energy(ansatz, H, theta0):
+def minimize_energy(ansatz, H, theta0, maxiter=1000, ftol=1e-6):
     """One SLSQP minimization of Eq. (18) from one initial parameter vector.
 
     Optimizer: qiskit_algorithms.optimizers.SLSQP with maxiter=1000, as in
     the Qiskit Algorithms tutorial "An Introduction to Algorithms using
-    Qiskit". ftol stays at the class default, 1e-6. Bounds are
-    RealAmplitudes.parameter_bounds. The returned energy is still only an
-    upper bound on diagonalize(H) evals[0]; Section III.B repeats the
+    Qiskit". ftol stays at the class default, 1e-6, unless overridden.
+    Bounds are RealAmplitudes.parameter_bounds. The returned energy is still
+    only an upper bound on diagonalize(H) evals[0]; Section III.B repeats the
     minimization from new initial parameters because a single start can stop
     in a local minimum.
     """
     def objective(theta):
         return energy_expectation(ansatz, theta, H)
 
-    return SLSQP(maxiter=1000).minimize(
+    return SLSQP(maxiter=maxiter, ftol=ftol).minimize(
         objective,
         np.asarray(theta0, dtype=float),
         bounds=ansatz.parameter_bounds,
@@ -144,15 +146,15 @@ def _minimized_energy(job):
     best_restart consumes the energy and keeps the lowest one. The state is
     the vector state_fidelity compares with evecs[:, 0].
     """
-    ansatz, H, theta0 = job
-    result = minimize_energy(ansatz, H, theta0)
+    ansatz, H, theta0, maxiter, ftol = job
+    result = minimize_energy(ansatz, H, theta0, maxiter=maxiter, ftol=ftol)
     theta = np.asarray(result.x, dtype=float)
     psi = trial_statevector(ansatz, theta)
     energy = float(np.real(np.vdot(psi, H @ psi)))
     return energy, theta, psi, int(result.nfev)
 
 
-def best_restart(ansatz, H, psi_ed, initial_points):
+def best_restart(ansatz, H, psi_ed, initial_points, maxiter=1000, ftol=1e-6):
     """Lowest Eq. (18) energy among the supplied SLSQP starts.
 
     Table I passes random initial parameters. field_scan passes those
@@ -162,7 +164,7 @@ def best_restart(ansatz, H, psi_ed, initial_points):
     returned so a discarded minimum can be compared with that eigenvalue.
     """
     jobs = [
-        (ansatz, H, np.asarray(theta0, dtype=float))
+        (ansatz, H, np.asarray(theta0, dtype=float), int(maxiter), float(ftol))
         for theta0 in initial_points
     ]
     if len(jobs) == 1:
@@ -186,7 +188,19 @@ def best_restart(ansatz, H, psi_ed, initial_points):
     return best, restart_energies
 
 
-def field_scan(ansatz, theta_at_zero, eps_values, N, a, m, g, n_restarts, seed):
+def field_scan(
+    ansatz,
+    theta_at_zero,
+    eps_values,
+    N,
+    a,
+    m,
+    g,
+    n_restarts,
+    seed,
+    maxiter=1000,
+    ftol=1e-6,
+):
     """Ground energy E0^VQE(ε) and state ψ0^VQE on the Fig. 1 grid.
 
     Eq. (18) at each stored ε. ε = 0 is the Table I vector and is not
@@ -227,7 +241,7 @@ def field_scan(ansatz, theta_at_zero, eps_values, N, a, m, g, n_restarts, seed):
                 batch += 1
                 n_drawn += n_restarts
                 candidate, _restart_energies = best_restart(
-                    ansatz, H, psi_ed, initial_points
+                    ansatz, H, psi_ed, initial_points, maxiter=maxiter, ftol=ftol
                 )
                 if best is None or candidate["energy"] < best["energy"]:
                     best = candidate

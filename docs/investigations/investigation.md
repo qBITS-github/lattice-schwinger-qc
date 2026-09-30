@@ -1,5 +1,7 @@
 # Why the markers left the exact curves
 
+This note is the repair that put the markers back on the curves. The numbers in the body are that repair: VQE `RealAmplitudes` `reps=3`, minimum fidelity $0.9969$, and the VQD scan orthogonalized to those states, minimum fidelity $0.9931$. The production scans are VQE `reps=4` and VQD `reps=10` against those ground states; those numbers are in [../paper_deliverables.md](../paper_deliverables.md).
+
 Lattice units are $a = m = g = 1$, $N = 8$. Fig. 1 uses $\varepsilon$ on `np.linspace(0, 3, 81)`. Figs. 3–8 use the quench fields already stored by `scripts/run_trotter.py`, with $\Delta t = 0.1$ out to $t = 12$. The Pauli Hamiltonian and the observables are unchanged.
 
 ## Two vacuum jumps
