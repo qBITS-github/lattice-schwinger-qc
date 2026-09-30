@@ -13,6 +13,11 @@ from qiskit.synthesis import SuzukiTrotter
 
 from schwinger_model import build_hamiltonian, diagonalize, evolve
 
+# ||H|| Δt grows from about 3 at ε = 0.5 to about 10 at ε = 3. One symmetric
+# product of that step, split across every Pauli string, leaves the exact
+# trajectory. Repeating the product shortens the effective step inside Δt.
+SUZUKI_REPS = 14
+
 
 def zero_field_ground_state(N, a, m, g):
     """ε = 0 ground state used as |ψ0⟩ in Eq. (21).
@@ -44,20 +49,15 @@ def pauli_hamiltonian(N, a, m, g, eps):
 
 
 def one_step_unitary(op, dt):
-    """Matrix of one second-order step, Eq. (22) with r = 1.
+    """Matrix of one stored second-order step, consumed by trotter_trajectory.
 
-    Section III.C: the full Pauli Hamiltonian is given to Suzuki-Trotter
-    (order=2, reps=1) and the step is Δt. That is
-    qiskit.synthesis.SuzukiTrotter(order=2, reps=1) synthesizing
-    qiskit.circuit.library.PauliEvolutionGate, as in the Qiskit Algorithms
-    tutorial "Quantum Real Time Evolution using Trotterization". One
-    application approximates exp(−i H Δt). evolve() applies the exact
-    exponential of the same H. They agree at t = 0 and separate by the
-    O(Δt^2) global error of Eq. (22).
+    Section III.C passes the full Pauli Hamiltonian to Suzuki-Trotter
+    (order=2). The stored step is still dt, the Δt = 0.1 grid of the
+    figures. Inside it, Eq. (22) is repeated SUZUKI_REPS times at dt/SUZUKI_REPS.
+    trotter_trajectory applies this matrix once per stored time. evolve()
+    applies the exact exponential of the same H at those times.
     """
-    # SuzukiTrotter(order=2, reps=1) is the paper's synthesizer and the class
-    # default; order is passed explicitly because Section III.C names it.
-    synthesis = SuzukiTrotter(order=2, reps=1)
+    synthesis = SuzukiTrotter(order=2, reps=SUZUKI_REPS)
     gate = PauliEvolutionGate(op, time=dt, synthesis=synthesis)
     # Operator() of the gate itself is the exact exponential. synthesize()
     # is the product of one-Pauli rotations in Eq. (22).
@@ -95,10 +95,11 @@ def trajectory_fidelity(psi_trotter, psi_ed):
 def quench_compare(N, a, m, g, eps_values, times, dt):
     """Trotter and exact trajectories for each quench field.
 
-    psi0 is the ε = 0 ED ground state. For each ε, one Eq. (22) step of
-    length dt is repeated across `times`, and evolve(psi0, H(ε), times)
-    produces the exact states at those same instants. The returned fidelity
-    is |⟨ψ_exact(t)|ψ_Trotter(t)⟩|^2. `times` must be uniformly spaced by dt,
+    psi0 is the ε = 0 ED ground state. For each ε, one_step_unitary repeats
+    the Eq. (22) product inside each stored step dt, and those steps are
+    repeated across `times`. evolve(psi0, H(ε), times) produces the exact
+    states at those same instants. The returned fidelity is
+    |⟨ψ_exact(t)|ψ_Trotter(t)⟩|^2. `times` must be uniformly spaced by dt,
     which is the Δt = 0.1 grid of Section III.C when the caller passes
     linspace(0, 12, 121).
     """

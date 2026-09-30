@@ -2,13 +2,16 @@
 
 Eq. (18) is minimized with the RealAmplitudes trial state and SLSQP.
 At ε = 0 several random initial parameters are tried and the lowest energy
-is kept (Table I). The optimizer is then walked from ε = 0 to ε = 3, each
-point starting from the previous point's parameters, which is the field scan
-described after Eq. (20). Those states are the ψ0^VQE that Eq. (19) penalizes
-against. Nothing here writes a file; scripts/run_vqe.py does that.
+is kept (Table I). The field scan then walks from ε = 0 to ε = 3. Each
+later field starts from the previous parameters and from random restarts,
+and the lowest energy is kept. Those states are the ψ0^VQE that Eq. (19)
+penalizes against. Nothing here writes a file; scripts/run_vqe.py does that.
 """
 
+import os
 import warnings
+from concurrent.futures import ProcessPoolExecutor
+import multiprocessing as mp
 
 # Section III.B names RealAmplitudes. Qiskit 2.1 deprecated the class in favor
 # of real_amplitudes(); the class is still that circuit, including its bounds.
@@ -135,26 +138,47 @@ def random_parameters(ansatz, n_restarts, seed):
     )
 
 
-def best_restart(ansatz, H, psi_ed, initial_points):
-    """Lowest Eq. (18) energy among the random SLSQP restarts.
+def _minimized_energy(job):
+    """Eq. (18) energy and ψ(θ) from one SLSQP start.
 
-    Every restart is an upper bound on evals[0] of this same H. The kept
-    vector is the Table I row: its energy, relative_energy_error, and
-    state_fidelity against psi_ed = evecs[:, 0]. Per-restart energies are
-    returned so the discarded local minima can be compared with that same
-    ED eigenvalue later.
+    best_restart consumes the energy and keeps the lowest one. The state is
+    the vector state_fidelity compares with evecs[:, 0].
     """
-    restart_energies = np.empty(len(initial_points))
+    ansatz, H, theta0 = job
+    result = minimize_energy(ansatz, H, theta0)
+    theta = np.asarray(result.x, dtype=float)
+    psi = trial_statevector(ansatz, theta)
+    energy = float(np.real(np.vdot(psi, H @ psi)))
+    return energy, theta, psi, int(result.nfev)
+
+
+def best_restart(ansatz, H, psi_ed, initial_points):
+    """Lowest Eq. (18) energy among the supplied SLSQP starts.
+
+    Table I passes random initial parameters. field_scan passes those
+    together with the warm start from the previous field. The kept vector
+    is the upper bound on evals[0] that run_vqe.py stores. Its fidelity is
+    state_fidelity against psi_ed = evecs[:, 0]. Per-start energies are
+    returned so a discarded minimum can be compared with that eigenvalue.
+    """
+    jobs = [
+        (ansatz, H, np.asarray(theta0, dtype=float))
+        for theta0 in initial_points
+    ]
+    if len(jobs) == 1:
+        outcomes = [_minimized_energy(jobs[0])]
+    else:
+        workers = min(len(jobs), os.cpu_count() or 1)
+        context = mp.get_context("fork")
+        with ProcessPoolExecutor(max_workers=workers, mp_context=context) as pool:
+            outcomes = list(pool.map(_minimized_energy, jobs))
+    restart_energies = np.empty(len(outcomes))
     best = None
-    for i, theta0 in enumerate(initial_points):
-        result = minimize_energy(ansatz, H, theta0)
-        theta = np.asarray(result.x, dtype=float)
-        psi = trial_statevector(ansatz, theta)
-        energy = float(np.real(np.vdot(psi, H @ psi)))
+    for i, (energy, theta, psi, nfev) in enumerate(outcomes):
         fidelity = state_fidelity(psi, psi_ed)
         restart_energies[i] = energy
         print(
-            f"    restart {i}: E={energy:.8f}  F={fidelity:.6f}  nfev={result.nfev}",
+            f"    restart {i}: E={energy:.8f}  F={fidelity:.6f}  nfev={nfev}",
             flush=True,
         )
         if best is None or energy < best["energy"]:
@@ -162,14 +186,15 @@ def best_restart(ansatz, H, psi_ed, initial_points):
     return best, restart_energies
 
 
-def field_scan(ansatz, theta_at_zero, eps_values, N, a, m, g):
-    """Eq. (18) at each Fig. 1 field, starting from the previous parameters.
+def field_scan(ansatz, theta_at_zero, eps_values, N, a, m, g, n_restarts, seed):
+    """Ground energy E0^VQE(ε) and state ψ0^VQE on the Fig. 1 grid.
 
-    The paragraph after Eq. (20) says the optimized parameters at one field
-    are the initial parameters at the next. ε = 0 is the Table I vector and
-    is not optimized again. At every ε the energy is an upper bound on
-    evals[0] from diagonalize(build_hamiltonian(ε), k=1), and the fidelity
-    is |⟨evecs[:, 0]|ψ(θ)⟩|^2. These vectors are ψ0^VQE in Eq. (19).
+    Eq. (18) at each stored ε. ε = 0 is the Table I vector and is not
+    optimized again. At each later field the previous parameters and
+    n_restarts random vectors are minimized, and the lowest energy is kept.
+    Further random draws are tried while that energy is still not the ground
+    state. run_vqe.py writes these states. run_vqd.py loads them as the
+    orthogonality reference in Eq. (19).
     """
     n_eps = len(eps_values)
     dim = 2 ** N
@@ -185,10 +210,30 @@ def field_scan(ansatz, theta_at_zero, eps_values, N, a, m, g):
             psi = trial_statevector(ansatz, theta)
             energy = float(np.real(np.vdot(psi, H @ psi)))
         else:
-            result = minimize_energy(ansatz, H, theta)
-            theta = np.asarray(result.x, dtype=float)
-            psi = trial_statevector(ansatz, theta)
-            energy = float(np.real(np.vdot(psi, H @ psi)))
+            # The warm start stays in the old vacuum across a first-order jump.
+            # Most restarts stop in a higher minimum of the new vacuum, so
+            # another draw is kept when its energy is lower.
+            best = None
+            batch = 0
+            n_drawn = 0
+            while best is None or (best["fidelity"] < 0.99 and n_drawn < 48):
+                if batch == 0:
+                    draws = random_parameters(ansatz, n_restarts, seed + i)
+                    initial_points = np.vstack([theta, draws])
+                else:
+                    initial_points = random_parameters(
+                        ansatz, n_restarts, seed + 10007 * batch + i
+                    )
+                batch += 1
+                n_drawn += n_restarts
+                candidate, _restart_energies = best_restart(
+                    ansatz, H, psi_ed, initial_points
+                )
+                if best is None or candidate["energy"] < best["energy"]:
+                    best = candidate
+            theta = best["theta"]
+            psi = best["psi"]
+            energy = best["energy"]
         energies[i] = energy
         energies_ed[i] = energy_ed
         fidelities[i] = state_fidelity(psi, psi_ed)
