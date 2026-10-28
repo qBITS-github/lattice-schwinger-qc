@@ -111,7 +111,7 @@ This is the origin of the factor $(-1)^n$ that appears throughout:
 
 **Roadmap's memorization check:** for $n=1,2,3,4,5,6,7,8$, $(-1)^n = -1,+1,-1,+1,-1,+1,-1,+1$. Odd $\Rightarrow -1$ (antiparticle-type, "background charge $+1$" needing subtraction), even $\Rightarrow +1$ (particle-type, "background charge $0$"). Internalizing this instantly is a genuine debugging tool: almost every sign bug in this kind of code is a staggering mismatch, and eyeballing "is $n$ odd or even, and does the sign in my code match" catches most of them without running anything.
 
-`src/schwinger_model.py` writes the stagger as $(-1)^{n+1}$ on this same 1-based label. That is $(-1)$ raised to the Python index $n-1$. The extra $+1$ is only because Python indexes from zero. It does not change the physics.
+`src/baseline/model.py` writes the stagger as $(-1)^{n+1}$ on this same 1-based label. That is $(-1)$ raised to the Python index $n-1$. The extra $+1$ is only because Python indexes from zero. It does not change the physics.
 
 ---
 

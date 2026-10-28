@@ -1,0 +1,22 @@
+{
+  "studies": 9,
+  "scan_rows": 753,
+  "verified_npz_points": 2882,
+  "invalid_trajectories": [],
+  "max_norm_error_all_controls": 1.656430548280241e-11,
+  "max_work_residual_all_controls": 2.6299573629984252e-11,
+  "source_archives_verified": true,
+  "endpoint_summary_values_verified": true,
+  "retained_original_files_verified_unchanged": 5800,
+  "legacy_trajectory_acceptance_recomputed_from_saved_metrics": 108,
+  "scope": "Nine retained studies only; excludes disposable validation reruns.",
+  "revamped_code_validation": {
+    "complete_recipes_smoke_tested": 9,
+    "rerun_rows_compared_with_original": 12,
+    "max_abs_difference_Y_W_DY_DW_F_and_response": 3.2526065174565133e-18,
+    "occupation_profiles_compared": true,
+    "full_753_row_recomputation": false,
+    "unit_tests_passed": 12,
+    "frozen_baseline_files_verified": 28
+  }
+}

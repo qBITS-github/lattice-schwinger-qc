@@ -1,0 +1,238 @@
+{
+  "key": {
+    "code": {
+      "requirements.txt": "4e15a4ba4fb3845b9b9dcb9cbe67c1275a3fdf02c3a65aa719849d4a1bd814ef",
+      "scripts/build_driven_report.py": "aa8983bbe38099ff0f54d00301c1b126f02cf075d4a5ff8741ba0eb1ff11e98d",
+      "scripts/check_reproduction.py": "94d987c300434057c2905761e7edfecdbc0544bb8bfcf076eac7540bf4744ff8",
+      "scripts/run_case_a.py": "cee7db14736822728a84f8e92ad378074567f1cd3ee8d961d03ad3f719243bfe",
+      "scripts/run_case_b.py": "37ef1b9e3aeb42c64e53af3978cf6e3a6c0c640e49af7dac42148f3e4b80da4e",
+      "scripts/run_driven_trotter.py": "b510ed01e3eb4d7824b5d2d8caf92f6e42d7baf6f13e57fe8c2bb6a106682009",
+      "scripts/run_exact_diagonalization.py": "fd6564d4008cd1412500460ab65ac327446bd25561fc448a7190f654c5ed71d0",
+      "scripts/run_pulse_checks.py": "f11429b2d4fc95a91b78bd27abf1e2f7e678148318e1a9ea414d6fdbb57f62be",
+      "scripts/run_spectrum.py": "b5351a0511fa7576008706769f585f4129b9160ac393c1cb9408f2e03a06a2e0",
+      "scripts/run_trotter.py": "211a842c62852f1dc3b429d434226609f311072b2907632a6133ee4f44c7d7d6",
+      "scripts/run_vqd.py": "d1b8bacb03b0d26f046123c4062ccd282834aeb3d903f9789eaec363c0b43b7f",
+      "scripts/run_vqe.py": "386b3d7ed32785b35d9637e185769ffc93e70106053ca77705c6b019570f978d",
+      "src/driven_checks.py": "4a3151b974a24633175715e635f1d9db511768eca68fd922d5032cb101230bef",
+      "src/driven_io.py": "063eea0601204ee74fa94219ace9cf41e229e0f9d874d2e22aa70f48982a5b7d",
+      "src/driven_model.py": "0d3f03ef921970f5404a06059b46ee0a90622ddfec3e5280aa1b2d501141645e",
+      "src/driven_observables.py": "14d88b40c33ac019c370094514e63a577723ffea7d6d3dc348298a1bfea281a9",
+      "src/driven_study.py": "127ba7ef514d2a888000b7d1fefa6ecb855eb42be28b12be503dc5936296a4bf",
+      "src/pulses.py": "936d4c2c6813616fda6503bf2bbcd538b79a902c465d2da23dcf72e3c18aad0c",
+      "src/response.py": "935610412a1c1b26d650d95a21aa43f0696ac4795a11e0d7278fb7d79e92f12e",
+      "src/schwinger_model.py": "1e5ea684f6aacdb0ffe0a531ba6c93b6a0ab4e1ca2a8204be993f9d663b9809f",
+      "src/time_evolution.py": "9a12dd11256594b039c0dcbf50ad9060916f7a64a1436008126e5bd405758b03",
+      "src/trotter.py": "8e47858f5ec7af0e9c3c46d893dd46a869635ebd5c38f2db47ad546ac1949040",
+      "src/trotter_driven.py": "fa34700c0ad84532cf4cc68a07f4dce2124a94ee5e97369ae446f746be123061",
+      "src/vqd.py": "9dc2786169e9cf033db9e65dbac2763bcb6668516e91f02cd1abf26b1e6ead6c",
+      "src/vqe.py": "43acea57a65c33069e5445e3fcb471fede1b14d8f7fa2291c6e4be583e024edc"
+    },
+    "specification": {
+      "background": 0.0,
+      "initial_state": "exact_neutral_zero_field_ground_state",
+      "interval": [
+        -62.98292365610485,
+        62.98292365610485
+      ],
+      "kind": "trajectory",
+      "method": "DOP853",
+      "model": {
+        "N": 12,
+        "Q": 0,
+        "a": 1.0,
+        "boundary": "open",
+        "g": 1.0,
+        "m": 1.0
+      },
+      "pulse": {
+        "amplitude": 0.01,
+        "center": 0.0,
+        "kind": "sauter",
+        "normalization": "component_peak",
+        "support": [
+          -6.298292365610485,
+          6.298292365610485
+        ],
+        "taper_duration": 1.0,
+        "taper_widths": 1.0,
+        "threshold": 0.0001,
+        "width": 1.0
+      },
+      "readout": {
+        "endpoint": "pulse_end",
+        "post_pulse_duration": 10.0,
+        "sampling_interval": 0.1
+      },
+      "seed": null,
+      "settings": {
+        "atol": 1e-12,
+        "max_step": 0.05,
+        "rtol": 1e-10
+      },
+      "store_states": false
+    }
+  },
+  "npz_sha256": "c227810034635c816c889c75710af53c191ebea9c5da8a328c1efd7b35bf4dad",
+  "result": {
+    "N_exc": 0.6678729467278175,
+    "N_excess": 9.717705444239888e-05,
+    "N_excess_average": 1.2873261984961745e-05,
+    "P_neutral": 1.0000000000000009,
+    "Q": 0.0,
+    "Q2": 0.0,
+    "W": 6.025293219810578e-06,
+    "W_per_site": 5.021077683175481e-07,
+    "Y": 2.2688168809205508e-06,
+    "charge": [
+      6.395680574467627e-05,
+      8.710043236430376e-06,
+      1.3441675167084888e-05,
+      2.0995410136025183e-05,
+      1.0230918860827665e-05,
+      9.335419178503612e-06,
+      -9.335419178191362e-06,
+      -1.0230918860737459e-05,
+      -2.0995410136497028e-05,
+      -1.344167516688366e-05,
+      -8.71004323672181e-06,
+      -6.395680574455831e-05
+    ],
+    "charge_average": [
+      3.313020152961359e-06,
+      1.1669907670877713e-06,
+      2.852886969242342e-06,
+      1.2374867058728513e-06,
+      1.9534485251048885e-06,
+      -7.217528180970859e-07,
+      7.217528180660188e-07,
+      -1.953448525100534e-06,
+      -1.237486705740321e-06,
+      -2.8528869693092038e-06,
+      -1.1669907671575929e-06,
+      -3.3130201529388527e-06
+    ],
+    "electric_energy": 0.16711324930937013,
+    "electric_energy_average": 0.16709195674387212,
+    "electric_profile": [
+      0.03275168643441573,
+      -0.02955538969320099,
+      0.02999858903159947,
+      -0.029777621370270343,
+      0.030004730209244115,
+      -0.029760439886447887,
+      0.030004730209244428,
+      -0.029777621370269958,
+      0.02999858903159944,
+      -0.029555389693200863,
+      0.032751686434415596
+    ],
+    "electric_profile_average": [
+      0.03269104264882402,
+      -0.029623576531262057,
+      0.029919813405340546,
+      -0.02987615491995942,
+      0.029897919189219302,
+      -0.02987730807846929,
+      0.029897919189219295,
+      -0.02987615491995945,
+      0.02991981340534066,
+      -0.029623576531262033,
+      0.03269104264882395
+    ],
+    "energy": -6.999549218825542,
+    "integrator": {
+      "atol": 1e-12,
+      "energy_shift": -6.999555244118752,
+      "max_step": 0.05,
+      "method": "DOP853",
+      "resolution_scale": 1.0,
+      "rtol": 1e-10,
+      "scalar_phase_omitted": true,
+      "segments": [
+        {
+          "end": -6.298292365610485,
+          "max_step": 0.05,
+          "start": -62.98292365610485
+        },
+        {
+          "end": -5.298292365610485,
+          "max_step": 0.05,
+          "start": -6.298292365610485
+        },
+        {
+          "end": 0.0,
+          "max_step": 0.05,
+          "start": -5.298292365610485
+        },
+        {
+          "end": 5.298292365610485,
+          "max_step": 0.05,
+          "start": 0.0
+        },
+        {
+          "end": 6.298292365610485,
+          "max_step": 0.05,
+          "start": 5.298292365610485
+        },
+        {
+          "end": 72.98292365610484,
+          "max_step": 0.05,
+          "start": 6.298292365610485
+        }
+      ]
+    },
+    "max_charge_squared": 0.0,
+    "max_norm_error": 3.552713678800501e-15,
+    "max_work_residual": 2.042810365310288e-14,
+    "norm": 1.0000000000000009,
+    "occupation": [
+      6.395680574467627e-05,
+      -8.710043236430376e-06,
+      1.3441675167084888e-05,
+      -2.0995410136025183e-05,
+      1.0230918860827665e-05,
+      -9.335419178503612e-06,
+      -9.335419178191362e-06,
+      1.0230918860737459e-05,
+      -2.0995410136497028e-05,
+      1.344167516688366e-05,
+      -8.71004323672181e-06,
+      6.395680574455831e-05
+    ],
+    "occupation_average": [
+      3.313020152961359e-06,
+      -1.1669907670877713e-06,
+      2.852886969242342e-06,
+      -1.2374867058728513e-06,
+      1.9534485251048885e-06,
+      7.217528180970859e-07,
+      7.217528180660188e-07,
+      1.953448525100534e-06,
+      -1.237486705740321e-06,
+      2.8528869693092038e-06,
+      -1.1669907671575929e-06,
+      3.3130201529388527e-06
+    ],
+    "post_W_drift": 2.709822722658274e-15,
+    "post_Y_drift": 4.573554398699595e-18,
+    "preparation": {
+      "Q": 0,
+      "epsilon": 0.0,
+      "method": "exact_neutral_zero_field_ground_state"
+    },
+    "tail_treatment": {
+      "amplitude": 0.01,
+      "center": 0.0,
+      "kind": "sauter",
+      "normalization": "component_peak",
+      "support": [
+        -6.298292365610485,
+        6.298292365610485
+      ],
+      "taper_duration": 1.0,
+      "taper_widths": 1.0,
+      "threshold": 0.0001,
+      "width": 1.0
+    }
+  }
+}

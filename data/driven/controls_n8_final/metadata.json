@@ -1,0 +1,182 @@
+{
+  "created_utc": "2026-10-19T12:57:19.883226+00:00",
+  "packages": {
+    "matplotlib": "3.11.0",
+    "numpy": "2.5.1",
+    "qiskit": "2.5.0",
+    "qiskit-algorithms": "0.4.0",
+    "scipy": "1.18.0"
+  },
+  "python": "3.14.8 (main, Oct  1 2026, 00:00:00) [GCC 16.2.1 20260819 (Red Hat 16.2.1-2)]",
+  "run_id": "controls_n8_final",
+  "schema_version": 2,
+  "signature": {
+    "code": {
+      "requirements.txt": "4e15a4ba4fb3845b9b9dcb9cbe67c1275a3fdf02c3a65aa719849d4a1bd814ef",
+      "scripts/build_driven_report.py": "aa8983bbe38099ff0f54d00301c1b126f02cf075d4a5ff8741ba0eb1ff11e98d",
+      "scripts/check_reproduction.py": "94d987c300434057c2905761e7edfecdbc0544bb8bfcf076eac7540bf4744ff8",
+      "scripts/run_case_a.py": "cee7db14736822728a84f8e92ad378074567f1cd3ee8d961d03ad3f719243bfe",
+      "scripts/run_case_b.py": "37ef1b9e3aeb42c64e53af3978cf6e3a6c0c640e49af7dac42148f3e4b80da4e",
+      "scripts/run_driven_trotter.py": "b510ed01e3eb4d7824b5d2d8caf92f6e42d7baf6f13e57fe8c2bb6a106682009",
+      "scripts/run_exact_diagonalization.py": "fd6564d4008cd1412500460ab65ac327446bd25561fc448a7190f654c5ed71d0",
+      "scripts/run_pulse_checks.py": "f11429b2d4fc95a91b78bd27abf1e2f7e678148318e1a9ea414d6fdbb57f62be",
+      "scripts/run_spectrum.py": "b5351a0511fa7576008706769f585f4129b9160ac393c1cb9408f2e03a06a2e0",
+      "scripts/run_trotter.py": "211a842c62852f1dc3b429d434226609f311072b2907632a6133ee4f44c7d7d6",
+      "scripts/run_vqd.py": "d1b8bacb03b0d26f046123c4062ccd282834aeb3d903f9789eaec363c0b43b7f",
+      "scripts/run_vqe.py": "386b3d7ed32785b35d9637e185769ffc93e70106053ca77705c6b019570f978d",
+      "src/driven_checks.py": "4a3151b974a24633175715e635f1d9db511768eca68fd922d5032cb101230bef",
+      "src/driven_io.py": "063eea0601204ee74fa94219ace9cf41e229e0f9d874d2e22aa70f48982a5b7d",
+      "src/driven_model.py": "0d3f03ef921970f5404a06059b46ee0a90622ddfec3e5280aa1b2d501141645e",
+      "src/driven_observables.py": "14d88b40c33ac019c370094514e63a577723ffea7d6d3dc348298a1bfea281a9",
+      "src/driven_study.py": "127ba7ef514d2a888000b7d1fefa6ecb855eb42be28b12be503dc5936296a4bf",
+      "src/pulses.py": "936d4c2c6813616fda6503bf2bbcd538b79a902c465d2da23dcf72e3c18aad0c",
+      "src/response.py": "935610412a1c1b26d650d95a21aa43f0696ac4795a11e0d7278fb7d79e92f12e",
+      "src/schwinger_model.py": "1e5ea684f6aacdb0ffe0a531ba6c93b6a0ab4e1ca2a8204be993f9d663b9809f",
+      "src/time_evolution.py": "9a12dd11256594b039c0dcbf50ad9060916f7a64a1436008126e5bd405758b03",
+      "src/trotter.py": "8e47858f5ec7af0e9c3c46d893dd46a869635ebd5c38f2db47ad546ac1949040",
+      "src/trotter_driven.py": "fa34700c0ad84532cf4cc68a07f4dce2124a94ee5e97369ae446f746be123061",
+      "src/vqd.py": "9dc2786169e9cf033db9e65dbac2763bcb6668516e91f02cd1abf26b1e6ead6c",
+      "src/vqe.py": "43acea57a65c33069e5445e3fcb471fede1b14d8f7fa2291c6e4be583e024edc"
+    },
+    "config": {
+      "analysis": {
+        "background_selection": {
+          "rule": "At T_s=10: largest calibrated amplitude with Y<1e-8; smallest with 0.001<Y<0.5",
+          "strong": {
+            "Y": 0.00600222815543026,
+            "epsilon_s": 1.0,
+            "index": 8
+          },
+          "weak": {
+            "Y": 8.343705150485254e-11,
+            "epsilon_s": 0.6,
+            "index": 6
+          }
+        },
+        "budget_reference_tau": 1.0,
+        "controls": true,
+        "convergence": true,
+        "delays": [
+          -10.0,
+          10.0
+        ],
+        "pump_response": true,
+        "readout_checks": [
+          5.0,
+          20.0
+        ],
+        "tail_checks": [
+          1e-05,
+          1e-06
+        ],
+        "weak_amplitude_ceiling": 0.04
+      },
+      "case": "case_a_controls_n8",
+      "initial_state": "exact_neutral_zero_field_ground_state",
+      "integrator": {
+        "atol": 1e-12,
+        "max_step": 0.05,
+        "method": "DOP853",
+        "rtol": 1e-10
+      },
+      "model": {
+        "N": 8,
+        "Q": 0,
+        "a": 1.0,
+        "boundary": "open",
+        "g": 1.0,
+        "m": 1.0
+      },
+      "pulse": {
+        "T_s": 10.0,
+        "epsilon_s": 0.8,
+        "epsilon_w": 0.01,
+        "kind": "two_sauter",
+        "t_d": 0.0,
+        "tail_relative_threshold": 0.0001,
+        "taper_duration_in_component_widths": 1.0,
+        "tau": 0.5
+      },
+      "readout": {
+        "endpoint": "pulse_end",
+        "post_pulse_duration": 10.0,
+        "sampling_interval": 0.1
+      },
+      "scan": {
+        "pulse.epsilon_s": [
+          0.6,
+          1.0
+        ],
+        "pulse.epsilon_w": [
+          0.01,
+          0.02,
+          0.04
+        ],
+        "pulse.tau": [
+          0.2,
+          0.5,
+          1.0,
+          2.0
+        ]
+      },
+      "seed": null
+    },
+    "kind": "A"
+  },
+  "source": {
+    "commit": "5497cd4a763b00f92269f7e8e650e2664d5c72f1",
+    "dirty": true,
+    "file_sha256": {
+      "configs/driven/case_a_controls_n8.json": "0fd4703cdcffd93fd82ba8614e40c4eac4e3365c98b604230b8cc583f2fec6ff",
+      "configs/driven/case_a_pilot_n8.json": "ba5768a9679d1123673a76ad2720d5e652878bcb39c03604e43dbd5d80b71587",
+      "configs/driven/case_b_background_n8.json": "d8358cca0d3c3427b1e95eb1747c5b09a92fd3f910ed46999bd870740a16ee3f",
+      "configs/driven/case_b_sauter_n8.json": "c9cac4d86060db809c8626ffe81f098cf6b43fbe86803dc4d8ed1caec743d597",
+      "configs/driven/case_b_stationary_n8.json": "f4c830831b43348803bea3a621a504067a55b07068669dabeb75b826e62999ac",
+      "configs/driven/case_b_weak_checks_n8.json": "923961a5e52d25516729e1e1a1128b1b97aa8031cef3d3bc01722efd430ccef9",
+      "configs/driven/case_b_zero_n8.json": "9baa6441b9a58e3baf0f79fc3124190a68757773ecb87e202a11d0888e7c18ae",
+      "configs/driven/circuit_selected.json": "90d59e8f00835a3370aac2e9b6a23ece5b020f5df950dabd2e72cdac15ded53a",
+      "configs/driven/coupling_case_a.json": "0212c9f79566e5de49511593b26fbcdc1d9b1602ba01294dc48c33f38c4788e8",
+      "configs/driven/size_case_a.json": "1712c9dcae4827edac2e7516d888e61ed5e2c407088cf168fa4367c26fba612c",
+      "configs/driven/size_response.json": "aa38bff6ac66bc5554f9c5d0e5e8d73ab6b5a0056a41d97157c8aa68294dfcc0",
+      "configs/driven/spectrum_n8.json": "ead260d14bf2942385f04c4edccda8706afef7d8f44e1a75f4cae6978678444c",
+      "configs/driven/strong_calibration_n8.json": "a3f27b089a36bc22116b6e4cf1ad046475bac85aeefbdf8070231e6a314ed17b",
+      "configs/driven/validation_n8.json": "7e33a81286b14d581fcfc02598c412506cc81cb5e0325fd08e71a0132eff85c6",
+      "requirements.txt": "4e15a4ba4fb3845b9b9dcb9cbe67c1275a3fdf02c3a65aa719849d4a1bd814ef",
+      "scripts/build_driven_report.py": "aa8983bbe38099ff0f54d00301c1b126f02cf075d4a5ff8741ba0eb1ff11e98d",
+      "scripts/check_reproduction.py": "94d987c300434057c2905761e7edfecdbc0544bb8bfcf076eac7540bf4744ff8",
+      "scripts/run_case_a.py": "cee7db14736822728a84f8e92ad378074567f1cd3ee8d961d03ad3f719243bfe",
+      "scripts/run_case_b.py": "37ef1b9e3aeb42c64e53af3978cf6e3a6c0c640e49af7dac42148f3e4b80da4e",
+      "scripts/run_driven_trotter.py": "b510ed01e3eb4d7824b5d2d8caf92f6e42d7baf6f13e57fe8c2bb6a106682009",
+      "scripts/run_exact_diagonalization.py": "fd6564d4008cd1412500460ab65ac327446bd25561fc448a7190f654c5ed71d0",
+      "scripts/run_pulse_checks.py": "f11429b2d4fc95a91b78bd27abf1e2f7e678148318e1a9ea414d6fdbb57f62be",
+      "scripts/run_spectrum.py": "b5351a0511fa7576008706769f585f4129b9160ac393c1cb9408f2e03a06a2e0",
+      "scripts/run_trotter.py": "211a842c62852f1dc3b429d434226609f311072b2907632a6133ee4f44c7d7d6",
+      "scripts/run_vqd.py": "d1b8bacb03b0d26f046123c4062ccd282834aeb3d903f9789eaec363c0b43b7f",
+      "scripts/run_vqe.py": "386b3d7ed32785b35d9637e185769ffc93e70106053ca77705c6b019570f978d",
+      "src/driven_checks.py": "4a3151b974a24633175715e635f1d9db511768eca68fd922d5032cb101230bef",
+      "src/driven_io.py": "063eea0601204ee74fa94219ace9cf41e229e0f9d874d2e22aa70f48982a5b7d",
+      "src/driven_model.py": "0d3f03ef921970f5404a06059b46ee0a90622ddfec3e5280aa1b2d501141645e",
+      "src/driven_observables.py": "14d88b40c33ac019c370094514e63a577723ffea7d6d3dc348298a1bfea281a9",
+      "src/driven_study.py": "127ba7ef514d2a888000b7d1fefa6ecb855eb42be28b12be503dc5936296a4bf",
+      "src/pulses.py": "936d4c2c6813616fda6503bf2bbcd538b79a902c465d2da23dcf72e3c18aad0c",
+      "src/response.py": "935610412a1c1b26d650d95a21aa43f0696ac4795a11e0d7278fb7d79e92f12e",
+      "src/schwinger_model.py": "1e5ea684f6aacdb0ffe0a531ba6c93b6a0ab4e1ca2a8204be993f9d663b9809f",
+      "src/time_evolution.py": "9a12dd11256594b039c0dcbf50ad9060916f7a64a1436008126e5bd405758b03",
+      "src/trotter.py": "8e47858f5ec7af0e9c3c46d893dd46a869635ebd5c38f2db47ad546ac1949040",
+      "src/trotter_driven.py": "fa34700c0ad84532cf4cc68a07f4dce2124a94ee5e97369ae446f746be123061",
+      "src/vqd.py": "9dc2786169e9cf033db9e65dbac2763bcb6668516e91f02cd1abf26b1e6ead6c",
+      "src/vqe.py": "43acea57a65c33069e5445e3fcb471fede1b14d8f7fa2291c6e4be583e024edc",
+      "visualization/ED.py": "efbcffb8ae1f18bcddab22f7d86686e120870c36681d6e2fab158a2962994da9",
+      "visualization/Trotter.py": "f4a742a62baa771c7387d68774c2006a629acd84930106b92a1bd13b7da59afe",
+      "visualization/VQD.py": "9ab7115ca549c5547663f4dee4defb3d00db4e7c132421c763fa5a96dee2305f",
+      "visualization/VQE.py": "c353c3564d856565c54d23b52eb47e6adfc959f1d491a5491133b1db82a90fa0",
+      "visualization/deps/paper.py": "d684f5b8aeaa27e1d197b32c361a51de8dd3371c54f34753d5b52939987bd7fa",
+      "visualization/deps/paperfigs.py": "bdb84799fa12f52aa913c03dd0cb32b2cf72d16c56d20dda51276d39554a5c9e",
+      "visualization/deps/style.py": "cb9439d18663fb982e13488878abf5b9ad06f227c1d10ec3941788c63e47e5b3",
+      "visualization/driven.py": "cedc28243466ef4093092eeaeee52c3ecf6f1d5bd842dcac3ef7805738beb94b",
+      "visualization/overlay.py": "0f66cef4d7b766855ddd3403d1f3cc6fa26e23e5d59b593789c10ec43649cdee"
+    }
+  },
+  "study": "driven",
+  "units": "Repository numerical units; hbar=1. Config times/frequencies are explicit numerical values."
+}

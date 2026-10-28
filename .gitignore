@@ -5,6 +5,9 @@ data/**/*reps3*
 # Scratch output.
 artifacts/
 
+# Disposable driven cache; complete studies keep their own numeric points.
+data/driven/_cache/
+
 # Python bytecode.
 __pycache__/
 *.py[cod]
