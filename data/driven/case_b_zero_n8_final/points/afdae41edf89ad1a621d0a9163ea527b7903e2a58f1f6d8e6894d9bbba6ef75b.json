@@ -1,0 +1,185 @@
+{
+  "key": {
+    "code": {
+      "requirements.txt": "4e15a4ba4fb3845b9b9dcb9cbe67c1275a3fdf02c3a65aa719849d4a1bd814ef",
+      "scripts/build_driven_report.py": "aa8983bbe38099ff0f54d00301c1b126f02cf075d4a5ff8741ba0eb1ff11e98d",
+      "scripts/check_reproduction.py": "94d987c300434057c2905761e7edfecdbc0544bb8bfcf076eac7540bf4744ff8",
+      "scripts/run_case_a.py": "cee7db14736822728a84f8e92ad378074567f1cd3ee8d961d03ad3f719243bfe",
+      "scripts/run_case_b.py": "37ef1b9e3aeb42c64e53af3978cf6e3a6c0c640e49af7dac42148f3e4b80da4e",
+      "scripts/run_driven_trotter.py": "b510ed01e3eb4d7824b5d2d8caf92f6e42d7baf6f13e57fe8c2bb6a106682009",
+      "scripts/run_exact_diagonalization.py": "fd6564d4008cd1412500460ab65ac327446bd25561fc448a7190f654c5ed71d0",
+      "scripts/run_pulse_checks.py": "f11429b2d4fc95a91b78bd27abf1e2f7e678148318e1a9ea414d6fdbb57f62be",
+      "scripts/run_spectrum.py": "b5351a0511fa7576008706769f585f4129b9160ac393c1cb9408f2e03a06a2e0",
+      "scripts/run_trotter.py": "211a842c62852f1dc3b429d434226609f311072b2907632a6133ee4f44c7d7d6",
+      "scripts/run_vqd.py": "d1b8bacb03b0d26f046123c4062ccd282834aeb3d903f9789eaec363c0b43b7f",
+      "scripts/run_vqe.py": "386b3d7ed32785b35d9637e185769ffc93e70106053ca77705c6b019570f978d",
+      "src/driven_checks.py": "4a3151b974a24633175715e635f1d9db511768eca68fd922d5032cb101230bef",
+      "src/driven_io.py": "063eea0601204ee74fa94219ace9cf41e229e0f9d874d2e22aa70f48982a5b7d",
+      "src/driven_model.py": "0d3f03ef921970f5404a06059b46ee0a90622ddfec3e5280aa1b2d501141645e",
+      "src/driven_observables.py": "14d88b40c33ac019c370094514e63a577723ffea7d6d3dc348298a1bfea281a9",
+      "src/driven_study.py": "127ba7ef514d2a888000b7d1fefa6ecb855eb42be28b12be503dc5936296a4bf",
+      "src/pulses.py": "936d4c2c6813616fda6503bf2bbcd538b79a902c465d2da23dcf72e3c18aad0c",
+      "src/response.py": "935610412a1c1b26d650d95a21aa43f0696ac4795a11e0d7278fb7d79e92f12e",
+      "src/schwinger_model.py": "1e5ea684f6aacdb0ffe0a531ba6c93b6a0ab4e1ca2a8204be993f9d663b9809f",
+      "src/time_evolution.py": "9a12dd11256594b039c0dcbf50ad9060916f7a64a1436008126e5bd405758b03",
+      "src/trotter.py": "8e47858f5ec7af0e9c3c46d893dd46a869635ebd5c38f2db47ad546ac1949040",
+      "src/trotter_driven.py": "fa34700c0ad84532cf4cc68a07f4dce2124a94ee5e97369ae446f746be123061",
+      "src/vqd.py": "9dc2786169e9cf033db9e65dbac2763bcb6668516e91f02cd1abf26b1e6ead6c",
+      "src/vqe.py": "43acea57a65c33069e5445e3fcb471fede1b14d8f7fa2291c6e4be583e024edc"
+    },
+    "specification": {
+      "background": 0.0,
+      "initial_state": "exact_neutral_zero_field_ground_state",
+      "interval": [
+        0.0,
+        32.0
+      ],
+      "kind": "trajectory",
+      "method": "DOP853",
+      "model": {
+        "N": 8,
+        "Q": 0,
+        "a": 1.0,
+        "boundary": "open",
+        "g": 1.0,
+        "m": 1.0
+      },
+      "pulse": {
+        "amplitude": 0.01,
+        "duration": 32.0,
+        "kind": "windowed_sine",
+        "normalization": "carrier_coefficient",
+        "omega": 0.7,
+        "phase": 0.0,
+        "start": 0.0
+      },
+      "readout": {
+        "endpoint": "pulse_end",
+        "post_pulse_duration": 10.0,
+        "sampling_interval": 0.1
+      },
+      "seed": null,
+      "settings": {
+        "atol": 1e-13,
+        "max_step": 0.025,
+        "resolution_scale": 0.5,
+        "rtol": 1.0000000000000001e-11
+      },
+      "store_states": false
+    }
+  },
+  "npz_sha256": "e2db5ba43de8130b1794f8deba616ae072c41c71e3907236ffdd2ceff6ec2775",
+  "result": {
+    "N_exc": 0.4286780056382745,
+    "N_excess": -5.195790407294676e-07,
+    "N_excess_average": -4.1829545058304125e-08,
+    "P_neutral": 0.9999999999999998,
+    "Q": 0.0,
+    "Q2": 0.0,
+    "W": 1.0783417388281103e-11,
+    "W_per_site": 1.347927173535138e-12,
+    "Y": 4.022266384120818e-12,
+    "charge": [
+      -2.564436921079216e-07,
+      1.874946440466596e-08,
+      1.015042353641471e-08,
+      -5.253212392863915e-09,
+      5.25321261490852e-09,
+      -1.0150423647437012e-08,
+      -1.8749464411604855e-08,
+      2.564436919968993e-07
+    ],
+    "charge_average": [
+      -1.7526019254650278e-08,
+      7.285146967246603e-09,
+      7.957702418473458e-09,
+      4.061308765297678e-09,
+      -4.061308744966717e-09,
+      -7.95770245431285e-09,
+      -7.285146948234032e-09,
+      1.7526019250695118e-08
+    ],
+    "electric_energy": 0.10725168274991238,
+    "electric_energy_average": 0.10725180247128689,
+    "electric_profile": [
+      0.03268747564771009,
+      -0.029628271510164735,
+      0.029912490246483497,
+      -0.029882528010420423,
+      0.02991249024648371,
+      -0.029628271510164606,
+      0.032687475647710205
+    ],
+    "electric_profile_average": [
+      0.032687714565382935,
+      -0.029628044056809327,
+      0.02991271550711779,
+      -0.029882293435264957,
+      0.029912715507117788,
+      -0.029628044056809317,
+      0.032687714565382955
+    ],
+    "energy": -4.638057740862708,
+    "integrator": {
+      "atol": 1e-13,
+      "energy_shift": -4.638057740873492,
+      "max_step": 0.025,
+      "method": "DOP853",
+      "resolution_scale": 0.5,
+      "rtol": 1.0000000000000001e-11,
+      "scalar_phase_omitted": true,
+      "segments": [
+        {
+          "end": 32.0,
+          "max_step": 0.025,
+          "start": 0.0
+        },
+        {
+          "end": 42.0,
+          "max_step": 0.025,
+          "start": 32.0
+        }
+      ]
+    },
+    "max_charge_squared": 0.0,
+    "max_norm_error": 1.4432899320127035e-15,
+    "max_work_residual": 7.862424090693959e-15,
+    "norm": 0.9999999999999998,
+    "occupation": [
+      -2.564436921079216e-07,
+      -1.874946440466596e-08,
+      1.015042353641471e-08,
+      5.253212392863915e-09,
+      5.25321261490852e-09,
+      1.0150423647437012e-08,
+      -1.8749464411604855e-08,
+      -2.564436919968993e-07
+    ],
+    "occupation_average": [
+      -1.7526019254650278e-08,
+      -7.285146967246603e-09,
+      7.957702418473458e-09,
+      -4.061308765297678e-09,
+      -4.061308744966717e-09,
+      7.95770245431285e-09,
+      -7.285146948234032e-09,
+      -1.7526019250695118e-08
+    ],
+    "post_W_drift": 1.9057578405056614e-15,
+    "post_Y_drift": 2.4790489867114867e-21,
+    "preparation": {
+      "Q": 0,
+      "epsilon": 0.0,
+      "method": "exact_neutral_zero_field_ground_state"
+    },
+    "tail_treatment": {
+      "amplitude": 0.01,
+      "duration": 32.0,
+      "kind": "windowed_sine",
+      "normalization": "carrier_coefficient",
+      "omega": 0.7,
+      "phase": 0.0,
+      "start": 0.0
+    }
+  }
+}
