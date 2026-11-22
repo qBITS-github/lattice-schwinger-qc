@@ -1,0 +1,76 @@
+{
+  "runs": [
+    "spectrum_n8_refined_final",
+    "weak_checks_n8_v2",
+    "calibration_n8_v2",
+    "case_a_n8_final",
+    "controls_n8_final",
+    "independent_case_a_final",
+    "case_b_zero_n8_final",
+    "plateau_n8_final",
+    "size_case_a_final"
+  ],
+  "configurations": {
+    "spectrum_n8_refined_final": "configs/driven/spectrum_n8_refined.json",
+    "weak_checks_n8_v2": "configs/driven/case_b_weak_checks_n8.json",
+    "calibration_n8_v2": "configs/driven/strong_calibration_n8.json",
+    "case_a_n8_final": "configs/driven/case_a_pilot_n8.json",
+    "controls_n8_final": "configs/driven/case_a_controls_n8.json",
+    "independent_case_a_final": "configs/driven/case_a_independent_n8.json",
+    "case_b_zero_n8_final": "configs/driven/case_b_zero_n8.json",
+    "plateau_n8_final": "configs/driven/case_b_background_n8.json",
+    "size_case_a_final": "configs/driven/size_case_a.json"
+  },
+  "recipes": {
+    "spectrum_n8_refined_final": {
+      "kind": "spectrum",
+      "indices": null
+    },
+    "weak_checks_n8_v2": {
+      "kind": "B",
+      "indices": null
+    },
+    "calibration_n8_v2": {
+      "kind": "A",
+      "indices": null
+    },
+    "case_a_n8_final": {
+      "kind": "A",
+      "indices": null
+    },
+    "controls_n8_final": {
+      "kind": "A",
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        9,
+        12,
+        13,
+        14,
+        15,
+        17,
+        21
+      ]
+    },
+    "independent_case_a_final": {
+      "kind": "A",
+      "indices": null
+    },
+    "case_b_zero_n8_final": {
+      "kind": "B",
+      "indices": null
+    },
+    "plateau_n8_final": {
+      "kind": "B",
+      "indices": null
+    },
+    "size_case_a_final": {
+      "kind": "A",
+      "indices": null
+    }
+  },
+  "retention_policy": "Only the eight selected figures, their eight input studies and the strong-pulse calibration used to select backgrounds. Keep complete raw points and original source archives for these nine studies."
+}

@@ -121,7 +121,7 @@ Term by term:
 
 **Memorization check** (do this until instant): $n=1,\ldots,8 \Rightarrow (-1)^n = -1,+1,-1,+1,-1,+1,-1,+1$. Odd → antiparticle-type, background charge $1$. Even → particle-type, background charge $0$. Nearly every sign bug in an implementation of this model is a staggering mismatch, and this table is the fastest way to catch one by eye.
 
-In these notes $n$ starts at 1, as in the paper, and the stagger is $(-1)^n$. In `src/schwinger_model.py` that site is stored at Python index $n-1$, which starts at 0, and the factor is written $(-1)^{n+1}$. The extra $+1$ is only that zero-based index. It does not change the physics. The mismatch to avoid is using $(-1)^n$ in one term and $(-1)^{n+1}$ in another.
+In these notes $n$ starts at 1, as in the paper, and the stagger is $(-1)^n$. In `src/baseline/model.py` that site is stored at Python index $n-1$, which starts at 0, and the factor is written $(-1)^{n+1}$. The extra $+1$ is only that zero-based index. It does not change the physics. The mismatch to avoid is using $(-1)^n$ in one term and $(-1)^{n+1}$ in another.
 
 ---
 

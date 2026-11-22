@@ -1,0 +1,49 @@
+{
+  "case": "case_b_weak_checks_n8",
+  "model": {
+    "N": 8,
+    "a": 1.0,
+    "m": 1.0,
+    "g": 1.0,
+    "Q": 0,
+    "boundary": "open"
+  },
+  "initial_state": "exact_neutral_zero_field_ground_state",
+  "pulse": {
+    "kind": "windowed_sine",
+    "epsilon_w": 0.01,
+    "omega": 2.658,
+    "phi": 0.0,
+    "T_w": 32.0
+  },
+  "integrator": {
+    "method": "DOP853",
+    "rtol": 1e-10,
+    "atol": 1e-12,
+    "max_step": 0.05
+  },
+  "readout": {
+    "endpoint": "pulse_end",
+    "post_pulse_duration": 10.0,
+    "sampling_interval": 0.1
+  },
+  "seed": null,
+  "scan": {
+    "pulse.T_w": [
+      32.0,
+      64.0
+    ],
+    "pulse.epsilon_w": [
+      0.0025,
+      0.005,
+      0.01
+    ],
+    "pulse.omega": [
+      1.083,
+      2.658
+    ]
+  },
+  "analysis": {
+    "convergence": true
+  }
+}

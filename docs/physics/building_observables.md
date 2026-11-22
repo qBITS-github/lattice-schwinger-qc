@@ -73,7 +73,7 @@ $$
 $$
 
 
-The formulas above are the paper's, with sites labeled $n = 1 \ldots N$ and stagger $(-1)^n$. `src/schwinger_model.py` stores site $n$ at Python index $n-1$. Its factor is $(-1)^{n+1}$, which is $(-1)$ raised to that index. The extra $+1$ is only because Python indexes from zero, and it does not change the physics. The same factor is used for every staggered observable.
+The formulas above are the paper's, with sites labeled $n = 1 \ldots N$ and stagger $(-1)^n$. `src/baseline/model.py` stores site $n$ at Python index $n-1$. Its factor is $(-1)^{n+1}$, which is $(-1)$ raised to that index. The extra $+1$ is only because Python indexes from zero, and it does not change the physics. The same factor is used for every staggered observable.
 
 ## Implementing the observables
 

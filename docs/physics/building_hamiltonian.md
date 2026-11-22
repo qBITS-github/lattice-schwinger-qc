@@ -58,7 +58,7 @@ So, $H_{\mathrm{kin}}$ is the only genuinely "quantum" component here since it f
 
 ## Site index
 
-The sums above use the paper's label $n = 1 \ldots N$, and the printed stagger is $(-1)^n$. Arrays in `src/schwinger_model.py` start at 0. The code's factor on that same label is $(-1)^{n+1}$, which is $(-1)$ raised to the Python index $n-1$. The extra $+1$ is only because Python indexes from zero. The mass, the Gauss law, and the charge observables all use this one factor. The offset does not change the physics.
+The sums above use the paper's label $n = 1 \ldots N$, and the printed stagger is $(-1)^n$. Arrays in `src/baseline/model.py` start at 0. The code's factor on that same label is $(-1)^{n+1}$, which is $(-1)$ raised to the Python index $n-1$. The extra $+1$ is only because Python indexes from zero. The mass, the Gauss law, and the charge observables all use this one factor. The offset does not change the physics.
 
 ## Setting up the simulation
 

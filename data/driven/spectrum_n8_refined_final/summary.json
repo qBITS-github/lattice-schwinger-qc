@@ -1,0 +1,2372 @@
+[
+  {
+    "E0": -4.63805774087349,
+    "bright_gap": 2.657994058372259,
+    "captured_weight": 0.22026058394776232,
+    "coordinates": {
+      "analysis.background": 0.0
+    },
+    "epsilon": 0.0,
+    "index": 0,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "b81148ef11eeaacb2c1504ba9423f5fc7ec792c38236acf90c1e54aa1638e23d",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.22026058394776246
+  },
+  {
+    "E0": -4.635020298214396,
+    "bright_gap": 2.658969848950022,
+    "captured_weight": 0.219685308490822,
+    "coordinates": {
+      "analysis.background": 0.025
+    },
+    "epsilon": 0.025,
+    "index": 1,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "4e5d80959b979c5f8b66c5b63e739fd5d93557daafcf7501985b334ae88a7f03",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.2196853084908218
+  },
+  {
+    "E0": -4.6277108483828036,
+    "bright_gap": 2.6551474091186873,
+    "captured_weight": 0.2192103143998697,
+    "coordinates": {
+      "analysis.background": 0.05
+    },
+    "epsilon": 0.05,
+    "index": 2,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "fb779c9f473b6cb38f746f05ec14690958168d8d89869e2538fa49dd07da3840",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.21921031439986977
+  },
+  {
+    "E0": -4.616129089351674,
+    "bright_gap": 2.6468875837297885,
+    "captured_weight": 0.2188352260025091,
+    "coordinates": {
+      "analysis.background": 0.075
+    },
+    "epsilon": 0.075,
+    "index": 3,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "fe7c8bfd01f00e3f95245c9a4319bd9f7020dff730d6ddd4c2e76bea3feed8df",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.21883522600250932
+  },
+  {
+    "E0": -4.600274813506117,
+    "bright_gap": 2.6347885255135086,
+    "captured_weight": 0.218559855727203,
+    "coordinates": {
+      "analysis.background": 0.1
+    },
+    "epsilon": 0.1,
+    "index": 4,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "ca340626fb62408d0ac0aba0bbd05a3276a51f3d509ea6cc165fd5b053a5136e",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.2185598557272029
+  },
+  {
+    "E0": -4.5801479075188,
+    "bright_gap": 2.619503796734384,
+    "captured_weight": 0.21838420494084992,
+    "coordinates": {
+      "analysis.background": 0.125
+    },
+    "epsilon": 0.125,
+    "index": 5,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "b191a99b4035449f288b4ec102a07edae4e0726de0c7dba46995d835cf0ccbe9",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.21838420494084992
+  },
+  {
+    "E0": -4.555748352506337,
+    "bright_gap": 2.601617546138236,
+    "captured_weight": 0.21830846664585893,
+    "coordinates": {
+      "analysis.background": 0.15
+    },
+    "epsilon": 0.15,
+    "index": 6,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "acc0561167668717f0ef0308f3ccd6a8edc34ec15722a96ed716c3f4cffbd6c3",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.21830846664585912
+  },
+  {
+    "E0": -4.527076224472296,
+    "bright_gap": 2.581590685569462,
+    "captured_weight": 0.2183330301427221,
+    "coordinates": {
+      "analysis.background": 0.175
+    },
+    "epsilon": 0.175,
+    "index": 7,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "92b1b75773ef2217c713bf0fe2f2984374a9110723332d6ee17ed283289f8bfe",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.21833303014272212
+  },
+  {
+    "E0": -4.494131695045946,
+    "bright_gap": 2.559752703095831,
+    "captured_weight": 0.2184584878270036,
+    "coordinates": {
+      "analysis.background": 0.2
+    },
+    "epsilon": 0.2,
+    "index": 8,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "097c51eccaf18005f269de9bdad628aa9d34f6933b8d8f226a59c4071d84b431",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.21845848782700378
+  },
+  {
+    "E0": -4.456915032530277,
+    "bright_gap": 2.5363121006784977,
+    "captured_weight": 0.21868564436241295,
+    "coordinates": {
+      "analysis.background": 0.225
+    },
+    "epsilon": 0.225,
+    "index": 9,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "6d7b34b846bee943ad4d181e834f8614afb99d8e838257cfea811f9fa47cdbc3",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.21868564436241306
+  },
+  {
+    "E0": -4.415426603277138,
+    "bright_gap": 2.511369110032339,
+    "captured_weight": 0.21901552855874173,
+    "coordinates": {
+      "analysis.background": 0.25
+    },
+    "epsilon": 0.25,
+    "index": 10,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "327216cb0b0bd286af93b0d3bbb3c791a6712ceee5da096e8df5cf34b7a6eeb3",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.21901552855874162
+  },
+  {
+    "E0": -4.369666873412908,
+    "bright_gap": 2.484923099468234,
+    "captured_weight": 0.21944940839080884,
+    "coordinates": {
+      "analysis.background": 0.275
+    },
+    "epsilon": 0.275,
+    "index": 11,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "0d42f2e89f36d46f595bbcab23a9b28e444422fde839beab7c7188e3d00a152f",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.21944940839080906
+  },
+  {
+    "E0": -4.319636410944502,
+    "bright_gap": 2.4568715163137846,
+    "captured_weight": 0.21998880973008317,
+    "coordinates": {
+      "analysis.background": 0.3
+    },
+    "epsilon": 0.3,
+    "index": 12,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "e3de2449301dda1d0443b7bb053d1073dd035e368039d24d1031b32af364e7db",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.2199888097300831
+  },
+  {
+    "E0": -4.265335888282988,
+    "bright_gap": 2.426998780234584,
+    "captured_weight": 0.2206355395350515,
+    "coordinates": {
+      "analysis.background": 0.325
+    },
+    "epsilon": 0.325,
+    "index": 13,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "db960c8a5583e7b0686f5702d160e0f847ca145734bbedfba90d3dfc416f42e3",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.22063553953505158
+  },
+  {
+    "E0": -4.206766085231826,
+    "bright_gap": 2.3949539382172285,
+    "captured_weight": 0.2213917144750654,
+    "coordinates": {
+      "analysis.background": 0.35
+    },
+    "epsilon": 0.35,
+    "index": 14,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "4810870a19ea660744fe17a72d2679fdb709d2d8ba18e7a561eed7c1088d7353",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.22139171447506553
+  },
+  {
+    "E0": -4.143927892498172,
+    "bright_gap": 2.3602165176922174,
+    "captured_weight": 0.2222597962668978,
+    "coordinates": {
+      "analysis.background": 0.375
+    },
+    "epsilon": 0.375,
+    "index": 15,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "d16fa52da7d87ad48c6be21204ee0ab44eddf0fc364827f2b0ca2678ac978007",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.22225979626689793
+  },
+  {
+    "E0": -4.076822315800862,
+    "bright_gap": 2.322052474405809,
+    "captured_weight": 0.2232426354155644,
+    "coordinates": {
+      "analysis.background": 0.4
+    },
+    "epsilon": 0.4,
+    "index": 16,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "96201ab6a657d09ff23b811909fa7f63c50008ed00323313c5e4c90466023461",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.22324263541556436
+  },
+  {
+    "E0": -4.005450480667636,
+    "bright_gap": 2.279468698119122,
+    "captured_weight": 0.22434352561838403,
+    "coordinates": {
+      "analysis.background": 0.425
+    },
+    "epsilon": 0.425,
+    "index": 17,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "9f0b2b9f9e3f750d70c1ca8c3ceeaae85a8fca18616a55c88831b3a3750a6b09",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.22434352561838397
+  },
+  {
+    "E0": -3.9298136380389606,
+    "bright_gap": 2.2311881813480476,
+    "captured_weight": 0.22556627188570527,
+    "coordinates": {
+      "analysis.background": 0.45
+    },
+    "epsilon": 0.45,
+    "index": 18,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "9d8155fad85cc9011a850aa694592f1534551691107086038658892627e50880",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.2255662718857053
+  },
+  {
+    "E0": -3.849913170828926,
+    "bright_gap": 2.1756924310246486,
+    "captured_weight": 0.22691527656517346,
+    "coordinates": {
+      "analysis.background": 0.475
+    },
+    "epsilon": 0.475,
+    "index": 19,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "d813423a6af59be7b8b24e7c590488444d61e30b62ae37c04f7e541e5d96d9d2",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.2269152765651735
+  },
+  {
+    "E0": -3.7657506016374853,
+    "bright_gap": 2.1114151984198752,
+    "captured_weight": 0.22839564910631183,
+    "coordinates": {
+      "analysis.background": 0.5
+    },
+    "epsilon": 0.5,
+    "index": 20,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "988d0be2f6440c6101f0d12e5d0d5028242db5686dcd12d086000cc74d01c9ea",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.22839564910631172
+  },
+  {
+    "E0": -3.6773276018690533,
+    "bright_gap": 2.0371827122208073,
+    "captured_weight": 0.23001334785860922,
+    "coordinates": {
+      "analysis.background": 0.525
+    },
+    "epsilon": 0.525,
+    "index": 21,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "2cf27208571037987f18b980c1db1d3941e7d7dc6059e3b736615b2803370b09",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.23001334785860916
+  },
+  {
+    "E0": -3.5846460025965285,
+    "bright_gap": 1.9528088180146548,
+    "captured_weight": 0.2317753659448587,
+    "coordinates": {
+      "analysis.background": 0.55
+    },
+    "epsilon": 0.55,
+    "index": 22,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "d960a42556640adf8cb427c9c68b43cadb7a51476cf17d7b58326fbd24b92060",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.23177536594485865
+  },
+  {
+    "E0": -3.4877078076301737,
+    "bright_gap": 1.8593518124978188,
+    "captured_weight": 0.23368997913156617,
+    "coordinates": {
+      "analysis.background": 0.575
+    },
+    "epsilon": 0.575,
+    "index": 23,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "468e6338304c9ac0b3027df5a37b6cbf08b31c78f5528b0619939e15d2e4e0eb",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.2336899791315661
+  },
+  {
+    "E0": -3.3865152094266886,
+    "bright_gap": 1.7586639148310899,
+    "captured_weight": 0.23576708312782615,
+    "coordinates": {
+      "analysis.background": 0.6
+    },
+    "epsilon": 0.6,
+    "index": 24,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "0bee088b0e8385a067eae79ab873d248337662aa2421f897a4b2d6542ae6206a",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.23576708312782627
+  },
+  {
+    "E0": -3.2810706087391117,
+    "bright_gap": 1.6526625201829943,
+    "captured_weight": 0.23801866365586954,
+    "coordinates": {
+      "analysis.background": 0.625
+    },
+    "epsilon": 0.625,
+    "index": 25,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "1040314355e85649910b7bd2e522d09ecd25f62c7398cd259087a211c17eb281",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.23801866365586943
+  },
+  {
+    "E0": -3.1713766393213527,
+    "bright_gap": 1.542903939255887,
+    "captured_weight": 0.24045947028870693,
+    "coordinates": {
+      "analysis.background": 0.65
+    },
+    "epsilon": 0.65,
+    "index": 26,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "d485119568192ea34e3baff56fae5329554c37592d6f6f1ad2be0b3b444e19b3",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.2404594702887068
+  },
+  {
+    "E0": -3.057436199670376,
+    "bright_gap": 1.4305121768709532,
+    "captured_weight": 0.2431080151841584,
+    "coordinates": {
+      "analysis.background": 0.675
+    },
+    "epsilon": 0.675,
+    "index": 27,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "4c823190eac194b7232fb86d57c3ee34624967cb5bbf008d604d94697c09892f",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.24310801518415823
+  },
+  {
+    "E0": -2.939252494921288,
+    "bright_gap": 1.3162625194383675,
+    "captured_weight": 0.24598811315960983,
+    "coordinates": {
+      "analysis.background": 0.7
+    },
+    "epsilon": 0.7,
+    "index": 28,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "02ce8113888eca28aacbc1128b4c9309f74f42ae7dd41eb93a7d2a883be76542",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.24598811315961
+  },
+  {
+    "E0": -2.8168290940275984,
+    "bright_gap": 1.2006854031677245,
+    "captured_weight": 0.24913137075638808,
+    "coordinates": {
+      "analysis.background": 0.725
+    },
+    "epsilon": 0.725,
+    "index": 29,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "d0470da9a183cfe42038c84c47d9e13956109db2fe72fed84bd4ed8c04d8b965",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.2491313707563884
+  },
+  {
+    "E0": -2.690170011167057,
+    "bright_gap": 1.0841477184164616,
+    "captured_weight": 0.2525814397297463,
+    "coordinates": {
+      "analysis.background": 0.75
+    },
+    "epsilon": 0.75,
+    "index": 30,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "ce9237f40b8c6a063fd85b17c8815aba113102557891029347f36055ba6f7d8a",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.25258143972974645
+  },
+  {
+    "E0": -2.5592798280125884,
+    "bright_gap": 0.9669084138680124,
+    "captured_weight": 0.2564017839916074,
+    "coordinates": {
+      "analysis.background": 0.775
+    },
+    "epsilon": 0.775,
+    "index": 31,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "279a154155802365798138cafa87e25899b54cbdd6002834262ab1f1b0d4a36d",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.2564017839916075
+  },
+  {
+    "E0": -2.4241638903596336,
+    "bright_gap": 0.8491549700361065,
+    "captured_weight": 0.26069103280728034,
+    "coordinates": {
+      "analysis.background": 0.8
+    },
+    "epsilon": 0.8,
+    "index": 32,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "132bf071557330a818b1630a59623228fb71f3a34d6493b7e57217a82e4ef511",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.26069103280728056
+  },
+  {
+    "E0": -2.2848286531559516,
+    "bright_gap": 0.7310273766461177,
+    "captured_weight": 0.26561639220947975,
+    "coordinates": {
+      "analysis.background": 0.825
+    },
+    "epsilon": 0.825,
+    "index": 33,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "f9c47b0f96eee7d32b1571caac552417277d190067cbbe2af749164e23eafc9c",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.26561639220947947
+  },
+  {
+    "E0": -2.141282357576105,
+    "bright_gap": 0.612634600919447,
+    "captured_weight": 0.27149557672037833,
+    "coordinates": {
+      "analysis.background": 0.85
+    },
+    "epsilon": 0.85,
+    "index": 34,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "5fe3a2c9e9385b50f7c76eb9e77ec776c88e035d1f473a45fcb5a2c10fa8c01d",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.2714955767203784
+  },
+  {
+    "E0": -1.993536567099795,
+    "bright_gap": 0.49406757757686615,
+    "captured_weight": 0.27903130884607535,
+    "coordinates": {
+      "analysis.background": 0.875
+    },
+    "epsilon": 0.875,
+    "index": 35,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "17e3094307aa96d76536faf99cf7a63eb96961b04099146255c5a837d93f580f",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.27903130884607524
+  },
+  {
+    "E0": -1.8416104025780475,
+    "bright_gap": 0.37541425432286646,
+    "captured_weight": 0.2901423021888699,
+    "coordinates": {
+      "analysis.background": 0.9
+    },
+    "epsilon": 0.9,
+    "index": 36,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "0bae79a28dc5c3cc837bca808490814c7d1b97128062fda1302287de94851f93",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.2901423021888698
+  },
+  {
+    "E0": -1.68554606670167,
+    "bright_gap": 0.25679501540188854,
+    "captured_weight": 0.31205169432359137,
+    "coordinates": {
+      "analysis.background": 0.925
+    },
+    "epsilon": 0.925,
+    "index": 37,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "e8854c604907392d73df0baad489f89b9f750b4c8a14d6c114993bfeb64bf5bf",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.31205169432359137
+  },
+  {
+    "E0": -1.525502774082262,
+    "bright_gap": 0.13855341276584543,
+    "captured_weight": 0.3945745290612388,
+    "coordinates": {
+      "analysis.background": 0.95
+    },
+    "epsilon": 0.95,
+    "index": 38,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "033ae1516917708df5c6e1ecb4556579803094b56b2c41fd10ae191466768095",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.3945745290612384
+  },
+  {
+    "E0": -1.5093023799530088,
+    "bright_gap": 0.126796268186943,
+    "captured_weight": 0.41639008155031126,
+    "coordinates": {
+      "analysis.background": 0.9525
+    },
+    "epsilon": 0.9525,
+    "index": 39,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "017614dcace6b3ca0cee10ef790d3a3fe4bf7c557c1279dbff1f34f03d350b6f",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.41639008155031143
+  },
+  {
+    "E0": -1.4930739249722778,
+    "bright_gap": 0.1150665359599723,
+    "captured_weight": 0.44505418040005773,
+    "coordinates": {
+      "analysis.background": 0.955
+    },
+    "epsilon": 0.955,
+    "index": 40,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "ec1977680333c3112d0993ff4a9011c72c9c7d4c72bdc1980c72f07675b0c343",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.44505418040005784
+  },
+  {
+    "E0": -1.4768220751952956,
+    "bright_gap": 0.10337355883187915,
+    "captured_weight": 0.48379772245222896,
+    "coordinates": {
+      "analysis.background": 0.9575
+    },
+    "epsilon": 0.9575,
+    "index": 41,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "96d22137bfa00dd61c4a3414871e4c63789e3ef548a1a4f64cbc4177deab0d46",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.48379772245222913
+  },
+  {
+    "E0": -1.4605538501665,
+    "bright_gap": 0.09173138573261186,
+    "captured_weight": 0.5379601607349783,
+    "coordinates": {
+      "analysis.background": 0.96
+    },
+    "epsilon": 0.96,
+    "index": 42,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "b078a33eded85700c6e8f4c221eaa0be204ad92600712b65f0508e2280adaf99",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.5379601607349782
+  },
+  {
+    "E0": -1.4442802988035044,
+    "bright_gap": 0.08016212354620111,
+    "captured_weight": 0.616829647619245,
+    "coordinates": {
+      "analysis.background": 0.9625
+    },
+    "epsilon": 0.9625,
+    "index": 43,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "44277b8d1edfe4e6d839704b582cd996ff2b41710467b6c5e297d43bfc024adc",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.6168296476192456
+  },
+  {
+    "E0": -1.428019807347972,
+    "bright_gap": 0.06870255301483486,
+    "captured_weight": 0.7375775421373948,
+    "coordinates": {
+      "analysis.background": 0.965
+    },
+    "epsilon": 0.965,
+    "index": 44,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "c0e6d907fbf808708dcd3cdef6dd2bf83f0041eb9f17921334d6e636e31d5c62",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.737577542137395
+  },
+  {
+    "E0": -1.411805176029505,
+    "bright_gap": 0.05741828206811839,
+    "captured_weight": 0.9342991665722945,
+    "coordinates": {
+      "analysis.background": 0.9675
+    },
+    "epsilon": 0.9675,
+    "index": 45,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "9bee3d0b40af441a8be049523a9c6a3865def8f4066536d0cb692a0f63add485",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.9342991665722945
+  },
+  {
+    "E0": -1.3957003013808382,
+    "bright_gap": 0.046437110454228936,
+    "captured_weight": 1.2802193613373083,
+    "coordinates": {
+      "analysis.background": 0.97
+    },
+    "epsilon": 0.97,
+    "index": 46,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "1bb09d1c93f239da82b16097434e030e5ecdf1418693bc807f3a41f9131c233a",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 1.280219361337309
+  },
+  {
+    "E0": -1.3798441225577327,
+    "bright_gap": 0.036036922379588,
+    "captured_weight": 1.9425297807948902,
+    "coordinates": {
+      "analysis.background": 0.9725
+    },
+    "epsilon": 0.9725,
+    "index": 47,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "e5ebc9ce67c682e46e50a8ab1f9c75c9348ca5eae2e9d6f9505f12b32c0c155a",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 1.94252978079489
+  },
+  {
+    "E0": -1.364577683904547,
+    "bright_gap": 0.02689981163910815,
+    "captured_weight": 3.2687455277807116,
+    "coordinates": {
+      "analysis.background": 0.975
+    },
+    "epsilon": 0.975,
+    "index": 48,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "35a2a527ced1450d6a38dc17eb91637436126e9a885b7917b089f1a610161fe7",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 3.268745527780718
+  },
+  {
+    "E0": -1.3507707609559039,
+    "bright_gap": 0.020765333617806192,
+    "captured_weight": 5.296604184495912,
+    "coordinates": {
+      "analysis.background": 0.9775
+    },
+    "epsilon": 0.9775,
+    "index": 49,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "723e58b4181f6915bd734ad344a3d6b8df132fc406d6cae4f1951195b547d87d",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 5.296604184495903
+  },
+  {
+    "E0": -1.3398709571380594,
+    "bright_gap": 0.020528698690917224,
+    "captured_weight": 5.3774883015241395,
+    "coordinates": {
+      "analysis.background": 0.98
+    },
+    "epsilon": 0.98,
+    "index": 50,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "ad2e5339b01967e11a39176ab54047af443aee1b0cc838d1d47406cced2fadff",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 5.37748830152414
+  },
+  {
+    "E0": -1.3319576446468038,
+    "bright_gap": 0.026348653976272285,
+    "captured_weight": 3.3106845456004925,
+    "coordinates": {
+      "analysis.background": 0.9825
+    },
+    "epsilon": 0.9825,
+    "index": 51,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "1e6f820d5c85c880e43c0c0f6d7d577a1a19e86f379f6f25b8c265dfcc0fe708",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 3.3106845456005054
+  },
+  {
+    "E0": -1.3255933067836227,
+    "bright_gap": 0.03535016800225832,
+    "captured_weight": 1.9018955135073319,
+    "coordinates": {
+      "analysis.background": 0.985
+    },
+    "epsilon": 0.985,
+    "index": 52,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "b37d917df5bfccbe0da33c95cfad4ff0c5e10fc4e6802cab8d55f416eb3471e1",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 1.9018955135072986
+  },
+  {
+    "E0": -1.3198560998281128,
+    "bright_gap": 0.0456895544474476,
+    "captured_weight": 1.198067011458007,
+    "coordinates": {
+      "analysis.background": 0.9875
+    },
+    "epsilon": 0.9875,
+    "index": 53,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "ada55821ab92883627648da99cc84e77fdc924c33f795f83aeb9bb44df05f2ce",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 1.1980670114580363
+  },
+  {
+    "E0": -1.3143818266030878,
+    "bright_gap": 0.0566384192645395,
+    "captured_weight": 0.8327549547983648,
+    "coordinates": {
+      "analysis.background": 0.99
+    },
+    "epsilon": 0.99,
+    "index": 54,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "ddc80d74f9a4e8f37d43c24b31cdf7f24d0567bf7176786adebaa50c62d6e038",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.8327549547983715
+  },
+  {
+    "E0": -1.3090232189062228,
+    "bright_gap": 0.06790222553667702,
+    "captured_weight": 0.626255814198332,
+    "coordinates": {
+      "analysis.background": 0.9925
+    },
+    "epsilon": 0.9925,
+    "index": 55,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "4dc11257bf688ca8c551c84ba4c0ca82e2907b1c16ba15678a7c18c0ec20fe63",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.6262558141983448
+  },
+  {
+    "E0": -1.3037131108884412,
+    "bright_gap": 0.07934664022594218,
+    "captured_weight": 0.50012363378821,
+    "coordinates": {
+      "analysis.background": 0.995
+    },
+    "epsilon": 0.995,
+    "index": 56,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "41b3f5a27990b9b510f77601b96202cf857604b9790f60950693d1d4839c2fa6",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.5001236337882773
+  },
+  {
+    "E0": -1.2984172589810512,
+    "bright_gap": 0.09090317401863102,
+    "captured_weight": 0.4180519956780237,
+    "coordinates": {
+      "analysis.background": 0.9975
+    },
+    "epsilon": 0.9975,
+    "index": 57,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "eaa9cff4918df3ab00ab80bdb24745d01fdada01485cb4b908fb60a7ed9aa0e1",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.41805199567800955
+  },
+  {
+    "E0": -1.2931165706484582,
+    "bright_gap": 0.10253363882044253,
+    "captured_weight": 0.36185937539801916,
+    "coordinates": {
+      "analysis.background": 1.0
+    },
+    "epsilon": 1.0,
+    "index": 58,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "7afac4c0a7dc41f2c8b77d23f19df2f610f077fe14e2fbf1152fea5878f477f6",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.3618593753980157
+  },
+  {
+    "E0": -1.2385280263881688,
+    "bright_gap": 0.22027188068319203,
+    "captured_weight": 0.19763482488739975,
+    "coordinates": {
+      "analysis.background": 1.025
+    },
+    "epsilon": 1.025,
+    "index": 59,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "550eabab0a4e8de5cf043161f592fdf8caeb4d1c91c33a36ca66866f8e5e801c",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.1976348248874018
+  },
+  {
+    "E0": -1.1800667537709182,
+    "bright_gap": 0.33861484503434724,
+    "captured_weight": 0.16717790807391933,
+    "coordinates": {
+      "analysis.background": 1.05
+    },
+    "epsilon": 1.05,
+    "index": 60,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "3c19c8a656846dc6ef83fc6076037d5ba8ce331e44b2715c08d398c78c02e68e",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.16717790807388155
+  },
+  {
+    "E0": -1.117438919701679,
+    "bright_gap": 0.456954795060715,
+    "captured_weight": 0.1538076415726511,
+    "coordinates": {
+      "analysis.background": 1.075
+    },
+    "epsilon": 1.075,
+    "index": 61,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "d10f8e4b681e4ea6cdc24d6f0e057cf6e0de72f2453e5a6993222c4b7df32b1e",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.15380764157266213
+  },
+  {
+    "E0": -1.0505838359429156,
+    "bright_gap": 0.5751352629327968,
+    "captured_weight": 0.14541956651691051,
+    "coordinates": {
+      "analysis.background": 1.1
+    },
+    "epsilon": 1.1,
+    "index": 62,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "8af0cab31eade796380e44a76324aa16c520099c7eb8ae01fa7d7b528a41e19c",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.14541956651691734
+  },
+  {
+    "E0": -0.9794765766408583,
+    "bright_gap": 0.6930487626237094,
+    "captured_weight": 0.13920975678291245,
+    "coordinates": {
+      "analysis.background": 1.125
+    },
+    "epsilon": 1.125,
+    "index": 63,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "f69002a061e22c60affa84f12083587f5d7a32dad919085b0fa0e10802b047a9",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.139209756782936
+  },
+  {
+    "E0": -0.9041028185404728,
+    "bright_gap": 0.8105722972831146,
+    "captured_weight": 0.13422396808390874,
+    "coordinates": {
+      "analysis.background": 1.15
+    },
+    "epsilon": 1.15,
+    "index": 64,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "8b2c3b44c5d05b77edcbbe07d4023c79aeacf80585fc8959cfb1f3093626e7ce",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.13422396808385528
+  },
+  {
+    "E0": -0.8244527214612793,
+    "bright_gap": 0.9275272131566472,
+    "captured_weight": 0.13004662828087604,
+    "coordinates": {
+      "analysis.background": 1.175
+    },
+    "epsilon": 1.175,
+    "index": 65,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "c14d09978e10533056535d56e35a03bfea1089f6973ec84a9b6af4dbbd7e45fe",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.1300466282809154
+  },
+  {
+    "E0": -0.7405188418402456,
+    "bright_gap": 1.0436165064681988,
+    "captured_weight": 0.1264614693077299,
+    "coordinates": {
+      "analysis.background": 1.2
+    },
+    "epsilon": 1.2,
+    "index": 66,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "793eda687a04c326271e3997407793ed7ba984218c35c664ed71b6d9c236cbf7",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.12646146930774904
+  },
+  {
+    "E0": -0.6522952390435971,
+    "bright_gap": 1.1582908585675544,
+    "captured_weight": 0.12333986474433783,
+    "coordinates": {
+      "analysis.background": 1.225
+    },
+    "epsilon": 1.225,
+    "index": 67,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "7123534553ad329b0695e4dde77652df8c6f93dc3269d04a4162f8a601975e60",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.12333986474434866
+  },
+  {
+    "E0": -0.5597770213502361,
+    "bright_gap": 1.2704281263760069,
+    "captured_weight": 0.12059728654994521,
+    "coordinates": {
+      "analysis.background": 1.25
+    },
+    "epsilon": 1.25,
+    "index": 68,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "ae015dba9fca9e95d721c3a6ef13d8173dc94e23ee7677c363bdd310dbd81e9e",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.12059728654997315
+  },
+  {
+    "E0": -0.4629600830034265,
+    "bright_gap": 1.3775647509343267,
+    "captured_weight": 0.11817395394696528,
+    "coordinates": {
+      "analysis.background": 1.275
+    },
+    "epsilon": 1.275,
+    "index": 69,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "5328926a471e93ccd5e291136eec8e382367c467129cb337c472aa0517aeade8",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.11817395394691843
+  },
+  {
+    "E0": -0.3618409359748436,
+    "bright_gap": 1.4746667691289286,
+    "captured_weight": 0.11602526880665329,
+    "coordinates": {
+      "analysis.background": 1.3
+    },
+    "epsilon": 1.3,
+    "index": 70,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "06fc88be2ed59784ad6902d8381b227f337e4c00536d0f9b3d83b042e9d3d7a3",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.1160252688066592
+  },
+  {
+    "E0": -0.25641659404221956,
+    "bright_gap": 1.5558388979486713,
+    "captured_weight": 0.11411664578190495,
+    "coordinates": {
+      "analysis.background": 1.325
+    },
+    "epsilon": 1.325,
+    "index": 71,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "f6e3bda4fe91d57b1d61a491cc4bb458ac634cd65f24f53f24feff3010383a90",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.11411664578188407
+  },
+  {
+    "E0": -0.1466844884521466,
+    "bright_gap": 1.621990000176523,
+    "captured_weight": 0.11242049592514272,
+    "coordinates": {
+      "analysis.background": 1.35
+    },
+    "epsilon": 1.35,
+    "index": 72,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "fa3710923459f8bbf2545a3b2c2895a295b2241cd3cf80ea429aa152e2a27a02",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.11242049592514292
+  },
+  {
+    "E0": -0.03264240408169377,
+    "bright_gap": 1.6793808587091905,
+    "captured_weight": 0.11091434782824505,
+    "coordinates": {
+      "analysis.background": 1.375
+    },
+    "epsilon": 1.375,
+    "index": 73,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "2165f481252bbab4544d08bf4968acbbb779b5bf1bcd9463c6613ffbe6dcb2d4",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.11091434782819931
+  },
+  {
+    "E0": 0.08571157030536458,
+    "bright_gap": 1.7324497649925228,
+    "captured_weight": 0.10957961047430402,
+    "coordinates": {
+      "analysis.background": 1.4
+    },
+    "epsilon": 1.4,
+    "index": 74,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "05ca84f88b8d735c8e1bbc53d2d8d2d10924bf0a9f50196de1f536a325d90cc3",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.10957961047433429
+  },
+  {
+    "E0": 0.20837908166041244,
+    "bright_gap": 1.783260347237413,
+    "captured_weight": 0.10840071973442285,
+    "coordinates": {
+      "analysis.background": 1.425
+    },
+    "epsilon": 1.425,
+    "index": 75,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "e61da8818d4316e34e1d27b77461776d9110c284e826e5f8858d67130681d724",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.10840071973441212
+  },
+  {
+    "E0": 0.33536154468808227,
+    "bright_gap": 1.8327258942112,
+    "captured_weight": 0.10736452627624922,
+    "coordinates": {
+      "analysis.background": 1.45
+    },
+    "epsilon": 1.45,
+    "index": 76,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "16043b7988cb167eda2015896dc5dee3da74a45b71993f4d3c7d4b42a229ee81",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.1073645262762355
+  },
+  {
+    "E0": 0.4666601680827868,
+    "bright_gap": 1.8812541869148798,
+    "captured_weight": 0.10645984235984435,
+    "coordinates": {
+      "analysis.background": 1.475
+    },
+    "epsilon": 1.475,
+    "index": 77,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "7a4b2b5f2fb6bcac47262e0e5208b582542ae9d794f6b3f193e15010e3fc57f3",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.10645984235983263
+  },
+  {
+    "E0": 0.6022759762146678,
+    "bright_gap": 1.9289998043307621,
+    "captured_weight": 0.1056770973700032,
+    "coordinates": {
+      "analysis.background": 1.5
+    },
+    "epsilon": 1.5,
+    "index": 78,
+    "method": "eigenpairs",
+    "model": {
+      "N": 8,
+      "Q": 0,
+      "a": 1.0,
+      "boundary": "open",
+      "g": 1.0,
+      "m": 1.0
+    },
+    "point": "7b2a586f87fb935c8e14f3fd38ec4c21df30961f97378ea43333cbc32951ac55",
+    "pulse": {
+      "T_w": 32.0,
+      "epsilon_w": 0.01,
+      "kind": "windowed_sine",
+      "omega": 2.658,
+      "phi": 0.0
+    },
+    "sector_dimension": 70,
+    "steps": null,
+    "variance": 0.10567709737002318
+  }
+]

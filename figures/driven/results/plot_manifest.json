@@ -1,0 +1,356 @@
+{
+  "study": "driven",
+  "plotter_sha256": "46bca7a90de25f5b0109aa0ce2ee78bb7d5d0b1302f8a7f3c84a6ad99a714688",
+  "run_suffix": "",
+  "notation": {
+    "P_exc": "saved Y",
+    "Delta_P_exc": "saved D_Y",
+    "Delta_W": "saved D_W"
+  },
+  "resolution_floor": 1e-08,
+  "captions_sha256": "c0b1a2695d90b71e19c7d00325daf0081da6bb2925cd51a468545a43d658dfbf",
+  "plots": {
+    "01_accessible_states": {
+      "question": "Which neutral excitations can the field couple to?",
+      "selection": {
+        "rows": "all 79 static backgrounds",
+        "display": "gaps up to 8g; colored transition weights >1e-8, common logarithmic scale"
+      },
+      "inputs_sha256": {
+        "data/driven/spectrum_n8_refined_final/metadata.json": "846598bc04f564373d9bd4673350132c826ace5f23e6e1256ef6eab0b88f3ed1",
+        "data/driven/spectrum_n8_refined_final/summary.json": "0648a46cd33da9efb8461bee85fb2df9ce662f60ec899f152c7413805ec4a9ab",
+        "data/driven/spectrum_n8_refined_final/points/b81148ef11eeaacb2c1504ba9423f5fc7ec792c38236acf90c1e54aa1638e23d.json": "09f97107c56f350e275a7b415782ded443b289a90483d60e5425d7ef2198657b",
+        "data/driven/spectrum_n8_refined_final/points/b81148ef11eeaacb2c1504ba9423f5fc7ec792c38236acf90c1e54aa1638e23d.npz": "92329d4a319fb01b43ca57bd0423a5bd69966b8d18830982a5c6296414631ad5",
+        "data/driven/spectrum_n8_refined_final/points/4e5d80959b979c5f8b66c5b63e739fd5d93557daafcf7501985b334ae88a7f03.json": "330377e73f66f2fa3d4b1e94809b2fe99a94788e1e8520922011cfc644ccb81b",
+        "data/driven/spectrum_n8_refined_final/points/4e5d80959b979c5f8b66c5b63e739fd5d93557daafcf7501985b334ae88a7f03.npz": "02e22b04f1a6dd47ad90a02839b880d255c40562571a34b1889495d30ad3bf3a",
+        "data/driven/spectrum_n8_refined_final/points/fb779c9f473b6cb38f746f05ec14690958168d8d89869e2538fa49dd07da3840.json": "cc8857cd5b56d1868fd44dd5e9e74406a54dd728366b6165c9a7cb8a21f214e3",
+        "data/driven/spectrum_n8_refined_final/points/fb779c9f473b6cb38f746f05ec14690958168d8d89869e2538fa49dd07da3840.npz": "cd77f9d799f979deb021a086d5619b5da45a4f56f2fdb061f1f4cda172a99e5b",
+        "data/driven/spectrum_n8_refined_final/points/fe7c8bfd01f00e3f95245c9a4319bd9f7020dff730d6ddd4c2e76bea3feed8df.json": "b7e931837ac3b643a688b1750fa5b7f53b52ed6a5672fe3ca90ac57b8e0644b4",
+        "data/driven/spectrum_n8_refined_final/points/fe7c8bfd01f00e3f95245c9a4319bd9f7020dff730d6ddd4c2e76bea3feed8df.npz": "815dff1a9947fca9f5b6e5faacf84c0490a9375c250975419356cc0d47c15554",
+        "data/driven/spectrum_n8_refined_final/points/ca340626fb62408d0ac0aba0bbd05a3276a51f3d509ea6cc165fd5b053a5136e.json": "ae44d8fb19732883423321d568423abfbe788261fea668e8ec37c5b2ab76ca52",
+        "data/driven/spectrum_n8_refined_final/points/ca340626fb62408d0ac0aba0bbd05a3276a51f3d509ea6cc165fd5b053a5136e.npz": "e7a60a9196530c94e9b50ecf2095e3fbbca23386a012d2063eb91d174f242ec0",
+        "data/driven/spectrum_n8_refined_final/points/b191a99b4035449f288b4ec102a07edae4e0726de0c7dba46995d835cf0ccbe9.json": "906db79e041c8879c656f3addde6847a8746f1f497780546bff4901e3741e9e2",
+        "data/driven/spectrum_n8_refined_final/points/b191a99b4035449f288b4ec102a07edae4e0726de0c7dba46995d835cf0ccbe9.npz": "88af8dfed65734876903a75983ea4a88f8784099f6bedf0369f2ce58ced0ea5b",
+        "data/driven/spectrum_n8_refined_final/points/acc0561167668717f0ef0308f3ccd6a8edc34ec15722a96ed716c3f4cffbd6c3.json": "c58f8494ab04335b5e873340fe6e60d72ab6aa86951c27e476ae879a84ea3151",
+        "data/driven/spectrum_n8_refined_final/points/acc0561167668717f0ef0308f3ccd6a8edc34ec15722a96ed716c3f4cffbd6c3.npz": "c8d257db085b30aa065e4ec0e5ea56a4cf74ad82b57138a5492c54a60e99ed15",
+        "data/driven/spectrum_n8_refined_final/points/92b1b75773ef2217c713bf0fe2f2984374a9110723332d6ee17ed283289f8bfe.json": "f19ddbfb4ec08c5f44894a77201ef16d2f63bdbb1bac5ecfc72e18555586cfdb",
+        "data/driven/spectrum_n8_refined_final/points/92b1b75773ef2217c713bf0fe2f2984374a9110723332d6ee17ed283289f8bfe.npz": "c95e7791b38fcc94844d73ccdae834cb501fa1b83d1eac312186f6f9c4e1c4f9",
+        "data/driven/spectrum_n8_refined_final/points/097c51eccaf18005f269de9bdad628aa9d34f6933b8d8f226a59c4071d84b431.json": "14acbbb554d0cb7ec7d24b4db2948a0a4b51d3704b49f5090ccb80c67e2f2c1c",
+        "data/driven/spectrum_n8_refined_final/points/097c51eccaf18005f269de9bdad628aa9d34f6933b8d8f226a59c4071d84b431.npz": "2c747fcef6259d6e8484e96032942073842918ddc9d2a34361bb6ac781ab917a",
+        "data/driven/spectrum_n8_refined_final/points/6d7b34b846bee943ad4d181e834f8614afb99d8e838257cfea811f9fa47cdbc3.json": "e16a8f13e0d3b73c8c461e2c0319d4af8809ad056b8aa0c4427c39a46983f7d8",
+        "data/driven/spectrum_n8_refined_final/points/6d7b34b846bee943ad4d181e834f8614afb99d8e838257cfea811f9fa47cdbc3.npz": "60ef479541946a8e12a2abcd7670399d9c5e9d2cd3d73bb5c69ec115f8040526",
+        "data/driven/spectrum_n8_refined_final/points/327216cb0b0bd286af93b0d3bbb3c791a6712ceee5da096e8df5cf34b7a6eeb3.json": "ff4c9ecb564ca51d066865e699ab3830e2d1e8af6a0bf72390dcd0eb52116f9e",
+        "data/driven/spectrum_n8_refined_final/points/327216cb0b0bd286af93b0d3bbb3c791a6712ceee5da096e8df5cf34b7a6eeb3.npz": "d9a1d0d95a3ca8802f31c51644cdabcb0b9ac9a54516ca52075433076918695f",
+        "data/driven/spectrum_n8_refined_final/points/0d42f2e89f36d46f595bbcab23a9b28e444422fde839beab7c7188e3d00a152f.json": "ca101f0053c600bdbc45996c415593defebe952646405ad0366b99ffe039da48",
+        "data/driven/spectrum_n8_refined_final/points/0d42f2e89f36d46f595bbcab23a9b28e444422fde839beab7c7188e3d00a152f.npz": "afdf88b3935aaa5f220240602e2dc942df566eeab2cfc9a99aa67c32ed81880f",
+        "data/driven/spectrum_n8_refined_final/points/e3de2449301dda1d0443b7bb053d1073dd035e368039d24d1031b32af364e7db.json": "64687b85b1d4fc288190bdd5e3e7fef606ac4809cde2f7e66192f1b0ebd18f78",
+        "data/driven/spectrum_n8_refined_final/points/e3de2449301dda1d0443b7bb053d1073dd035e368039d24d1031b32af364e7db.npz": "05b8590aa1806286bac6a882bb7cafb2f34c1aae10c92e7b871a3a1b13b2c00e",
+        "data/driven/spectrum_n8_refined_final/points/db960c8a5583e7b0686f5702d160e0f847ca145734bbedfba90d3dfc416f42e3.json": "c4275dbf6d37204214aa989bd7d2726df1874dea6ebfb50d0dd87e2d918edc95",
+        "data/driven/spectrum_n8_refined_final/points/db960c8a5583e7b0686f5702d160e0f847ca145734bbedfba90d3dfc416f42e3.npz": "a4055185ec0abc1d5c55c60e9604949189efc33b942a1d9f5ae1251c9547b953",
+        "data/driven/spectrum_n8_refined_final/points/4810870a19ea660744fe17a72d2679fdb709d2d8ba18e7a561eed7c1088d7353.json": "5e5266beee3b1d7f31f4419cb63abab45817723ca5f359203e4c5cffcced41e7",
+        "data/driven/spectrum_n8_refined_final/points/4810870a19ea660744fe17a72d2679fdb709d2d8ba18e7a561eed7c1088d7353.npz": "052385e7b93771b0e630739ae81ddf88ce21f238603f6905752c0697bd060912",
+        "data/driven/spectrum_n8_refined_final/points/d16fa52da7d87ad48c6be21204ee0ab44eddf0fc364827f2b0ca2678ac978007.json": "c0c71028d7392fd1f8127ecdf5188f80a6a7fb1d2854ad979979651be482f4f0",
+        "data/driven/spectrum_n8_refined_final/points/d16fa52da7d87ad48c6be21204ee0ab44eddf0fc364827f2b0ca2678ac978007.npz": "16463218dc7387351caaa92edb68c8a9fa9a6d67e368ed156899a30307beee87",
+        "data/driven/spectrum_n8_refined_final/points/96201ab6a657d09ff23b811909fa7f63c50008ed00323313c5e4c90466023461.json": "46d4fd1c7defb05359649de7ebef74d5cfa933fd11e1ef63f29f1f1fe21c1d49",
+        "data/driven/spectrum_n8_refined_final/points/96201ab6a657d09ff23b811909fa7f63c50008ed00323313c5e4c90466023461.npz": "bd352326aacd791d378e5cb09023d57c310c065b6a6c25ebbe68d20ce262e1ae",
+        "data/driven/spectrum_n8_refined_final/points/9f0b2b9f9e3f750d70c1ca8c3ceeaae85a8fca18616a55c88831b3a3750a6b09.json": "7f9ad8b0a6e866c0075afe12c1c35d8f95dac8ba7f9f6a39a761f8be1d617e10",
+        "data/driven/spectrum_n8_refined_final/points/9f0b2b9f9e3f750d70c1ca8c3ceeaae85a8fca18616a55c88831b3a3750a6b09.npz": "cd300d4a04eb5414e112f47d912590d0f36f150b7bdb4452594ba046cd92e55d",
+        "data/driven/spectrum_n8_refined_final/points/9d8155fad85cc9011a850aa694592f1534551691107086038658892627e50880.json": "52715380e3e78e9fba178417f8b362a12c98cb0144bb7986ea9c686781017872",
+        "data/driven/spectrum_n8_refined_final/points/9d8155fad85cc9011a850aa694592f1534551691107086038658892627e50880.npz": "7cc7c83e5ba37c7846ab240683fea823d59cfc639a6033438fd293d052ea5c5c",
+        "data/driven/spectrum_n8_refined_final/points/d813423a6af59be7b8b24e7c590488444d61e30b62ae37c04f7e541e5d96d9d2.json": "b5096a62bb58a717169c8b4bc8282e51a7aba99db1333aa8a515cba76528337f",
+        "data/driven/spectrum_n8_refined_final/points/d813423a6af59be7b8b24e7c590488444d61e30b62ae37c04f7e541e5d96d9d2.npz": "7dc81c2ba3e993dd868c6bdf98ffc6f86be8f3f453dd2952e0cbb9abba7b7b14",
+        "data/driven/spectrum_n8_refined_final/points/988d0be2f6440c6101f0d12e5d0d5028242db5686dcd12d086000cc74d01c9ea.json": "bb09894e535440b73c6081a3ff2026e64f741c03aaa3d35600142c60fbc014f6",
+        "data/driven/spectrum_n8_refined_final/points/988d0be2f6440c6101f0d12e5d0d5028242db5686dcd12d086000cc74d01c9ea.npz": "0e82ea73f640e3155d28a48798d375f184849b7b5fe88b973459021d90f323ef",
+        "data/driven/spectrum_n8_refined_final/points/2cf27208571037987f18b980c1db1d3941e7d7dc6059e3b736615b2803370b09.json": "f537fa50a0788b7f093ffc91c694c7277616c42dd871ae357c9d6daad1f8779b",
+        "data/driven/spectrum_n8_refined_final/points/2cf27208571037987f18b980c1db1d3941e7d7dc6059e3b736615b2803370b09.npz": "02c6c3294cd85a56b9fe060f7d372997b825c07398555835299f520e6d0e539b",
+        "data/driven/spectrum_n8_refined_final/points/d960a42556640adf8cb427c9c68b43cadb7a51476cf17d7b58326fbd24b92060.json": "2d52cf7f62dd87bf2030f02e064b3ee3058af7c9665fc35604d3b1c873090a4d",
+        "data/driven/spectrum_n8_refined_final/points/d960a42556640adf8cb427c9c68b43cadb7a51476cf17d7b58326fbd24b92060.npz": "2ebef86297968de1bfbcf3666e2238a663599ba8e7b64b33d0f1880096428443",
+        "data/driven/spectrum_n8_refined_final/points/468e6338304c9ac0b3027df5a37b6cbf08b31c78f5528b0619939e15d2e4e0eb.json": "756db29f5d26fc2974087e3adcb832e7ca60f660fd877c5fdc4360f6383cd7cb",
+        "data/driven/spectrum_n8_refined_final/points/468e6338304c9ac0b3027df5a37b6cbf08b31c78f5528b0619939e15d2e4e0eb.npz": "08d19aeab3be1098482e28ce37a56a6411be7670b1b78ac8923b25e80a21e147",
+        "data/driven/spectrum_n8_refined_final/points/0bee088b0e8385a067eae79ab873d248337662aa2421f897a4b2d6542ae6206a.json": "fe16ab519b0c7ee14e44bc9f1d83c997725c23bac9398781f9bc8c2bddf5c5ba",
+        "data/driven/spectrum_n8_refined_final/points/0bee088b0e8385a067eae79ab873d248337662aa2421f897a4b2d6542ae6206a.npz": "7678f666611e36ff6373b6a50989c1214cd614a58cf918a87d879995cc67eb46",
+        "data/driven/spectrum_n8_refined_final/points/1040314355e85649910b7bd2e522d09ecd25f62c7398cd259087a211c17eb281.json": "13d9b85c4f17a0468dc056df3e4320a11e0c4015cc3756186a306c41a61b78fa",
+        "data/driven/spectrum_n8_refined_final/points/1040314355e85649910b7bd2e522d09ecd25f62c7398cd259087a211c17eb281.npz": "7d1889c02916dbb1ed519de84bb025514d2bf1eedefac6b8e9e94340298db6c8",
+        "data/driven/spectrum_n8_refined_final/points/d485119568192ea34e3baff56fae5329554c37592d6f6f1ad2be0b3b444e19b3.json": "2997a4eb74e7a7c7d93fc35ed4954bbf62333b826f18373f04d829d7b3c21881",
+        "data/driven/spectrum_n8_refined_final/points/d485119568192ea34e3baff56fae5329554c37592d6f6f1ad2be0b3b444e19b3.npz": "9a9a12c942c47a4be0d24d9dc95d55a348e6ea1bd973231b580eba2c27b12438",
+        "data/driven/spectrum_n8_refined_final/points/4c823190eac194b7232fb86d57c3ee34624967cb5bbf008d604d94697c09892f.json": "a39c5cb54d49b07fa57fddf5045b673d08bf1277c865375e5e83596d06e8b0e2",
+        "data/driven/spectrum_n8_refined_final/points/4c823190eac194b7232fb86d57c3ee34624967cb5bbf008d604d94697c09892f.npz": "de11ed04b8d68099fe84aa442b429a70777a31e7ce15839b6c0ecf73a3bacda7",
+        "data/driven/spectrum_n8_refined_final/points/02ce8113888eca28aacbc1128b4c9309f74f42ae7dd41eb93a7d2a883be76542.json": "7c3324efd6529447373ddd89273dbffa2fda82ad38bf3dd4c16057c96208964e",
+        "data/driven/spectrum_n8_refined_final/points/02ce8113888eca28aacbc1128b4c9309f74f42ae7dd41eb93a7d2a883be76542.npz": "b6fa73ca50293cf4bc094ab53dc7dc982502fc188e118ef276ca523525be26ea",
+        "data/driven/spectrum_n8_refined_final/points/d0470da9a183cfe42038c84c47d9e13956109db2fe72fed84bd4ed8c04d8b965.json": "3b7dcf27922401b2869695a567098fafae1dba60211f28cc812362c49578ddbb",
+        "data/driven/spectrum_n8_refined_final/points/d0470da9a183cfe42038c84c47d9e13956109db2fe72fed84bd4ed8c04d8b965.npz": "313f087f17ac9e3eb02d1c93de5e95f2858c8b0cdb3adfcbbd3fec25eba0598d",
+        "data/driven/spectrum_n8_refined_final/points/ce9237f40b8c6a063fd85b17c8815aba113102557891029347f36055ba6f7d8a.json": "1118efc50f78be11e0650891327457f7939f2996b0a0389e8a258dba4f4b199b",
+        "data/driven/spectrum_n8_refined_final/points/ce9237f40b8c6a063fd85b17c8815aba113102557891029347f36055ba6f7d8a.npz": "ef4858d322a25c4d626f3cb246be072d28371baab480ce37ef319f44768079fa",
+        "data/driven/spectrum_n8_refined_final/points/279a154155802365798138cafa87e25899b54cbdd6002834262ab1f1b0d4a36d.json": "4a46e723a4ab43e557ad32e34798f95a7bbf8a5645905dbec8615064c1819542",
+        "data/driven/spectrum_n8_refined_final/points/279a154155802365798138cafa87e25899b54cbdd6002834262ab1f1b0d4a36d.npz": "0053287601a13eedd4d2d467abe2e53255c81e67c3d67829b6cf73786bdc7696",
+        "data/driven/spectrum_n8_refined_final/points/132bf071557330a818b1630a59623228fb71f3a34d6493b7e57217a82e4ef511.json": "ff2c4f3b3094c61ebd9021a07da449b420f4980620bfcdb671bad1556470281f",
+        "data/driven/spectrum_n8_refined_final/points/132bf071557330a818b1630a59623228fb71f3a34d6493b7e57217a82e4ef511.npz": "93981a69e82099673eafb82ae736d8565413c9c38e4cd44ad8f4ff0b4aac58db",
+        "data/driven/spectrum_n8_refined_final/points/f9c47b0f96eee7d32b1571caac552417277d190067cbbe2af749164e23eafc9c.json": "05bc77ff52ad61dff54e0d8dc808d2a6703c9f549905a4aff05e596049d6fc05",
+        "data/driven/spectrum_n8_refined_final/points/f9c47b0f96eee7d32b1571caac552417277d190067cbbe2af749164e23eafc9c.npz": "60ba26649d040b6eb52e673316fb1c75702801037e300062cdf1d8568d89db27",
+        "data/driven/spectrum_n8_refined_final/points/5fe3a2c9e9385b50f7c76eb9e77ec776c88e035d1f473a45fcb5a2c10fa8c01d.json": "71ebd220c8ec16296e864d332ff599a3f456fd97a49a6fbdc0edc9e1f0e64423",
+        "data/driven/spectrum_n8_refined_final/points/5fe3a2c9e9385b50f7c76eb9e77ec776c88e035d1f473a45fcb5a2c10fa8c01d.npz": "2239b279ddaef7a0e9ac458dcf7a0865edc5b8d1ab26a577796d8774ca128687",
+        "data/driven/spectrum_n8_refined_final/points/17e3094307aa96d76536faf99cf7a63eb96961b04099146255c5a837d93f580f.json": "e3dcef7cfb28d9822e300633232aeae1e831f2e754d374bdc3e347e08eff6141",
+        "data/driven/spectrum_n8_refined_final/points/17e3094307aa96d76536faf99cf7a63eb96961b04099146255c5a837d93f580f.npz": "681df56de334fb07a54248cb9b1bd3caae3eb4851a6ab75fb67376116a0439ab",
+        "data/driven/spectrum_n8_refined_final/points/0bae79a28dc5c3cc837bca808490814c7d1b97128062fda1302287de94851f93.json": "bf0e48a660bcd47693648744e28d3b1480f3e60e10c06737cfaa496f2c825141",
+        "data/driven/spectrum_n8_refined_final/points/0bae79a28dc5c3cc837bca808490814c7d1b97128062fda1302287de94851f93.npz": "51aea876d11af7db6e2db2fb1866358baaf94cceca615aa5e097a91e0aae515e",
+        "data/driven/spectrum_n8_refined_final/points/e8854c604907392d73df0baad489f89b9f750b4c8a14d6c114993bfeb64bf5bf.json": "ec56f03a5603bca5e8c4b3f28fc7488646484469c6946fdbee913bb6a57eead7",
+        "data/driven/spectrum_n8_refined_final/points/e8854c604907392d73df0baad489f89b9f750b4c8a14d6c114993bfeb64bf5bf.npz": "52162d9f4756d59943ba838a0e17f00c45717a402640e33407feb9b690460b27",
+        "data/driven/spectrum_n8_refined_final/points/033ae1516917708df5c6e1ecb4556579803094b56b2c41fd10ae191466768095.json": "e8befe4830ae970356dc50d07377f756f1d29e38e0cbeeddf1a58cb5463bd9e5",
+        "data/driven/spectrum_n8_refined_final/points/033ae1516917708df5c6e1ecb4556579803094b56b2c41fd10ae191466768095.npz": "cd16d697b8f33dcd0ced4a653ec249c6dd3d6dddb681e50d93a8ee815e0a2fe3",
+        "data/driven/spectrum_n8_refined_final/points/017614dcace6b3ca0cee10ef790d3a3fe4bf7c557c1279dbff1f34f03d350b6f.json": "72f3c8ea3d9c522aa90836fa9e5fd04ab1dfb104d1d097c9e1fc1dd5b81b4767",
+        "data/driven/spectrum_n8_refined_final/points/017614dcace6b3ca0cee10ef790d3a3fe4bf7c557c1279dbff1f34f03d350b6f.npz": "927cb0d6fe81fc2533d40b347992e6d883552c8b56324161e6258454fe1e35f3",
+        "data/driven/spectrum_n8_refined_final/points/ec1977680333c3112d0993ff4a9011c72c9c7d4c72bdc1980c72f07675b0c343.json": "e075565af852bf9b3639594c0329b8c77f1ffa79e27af924516e9297fad48de0",
+        "data/driven/spectrum_n8_refined_final/points/ec1977680333c3112d0993ff4a9011c72c9c7d4c72bdc1980c72f07675b0c343.npz": "8c6b45a8bcf12f7c1de8f721fc40d448d1e675181dfff7e6e4d435d39505dad7",
+        "data/driven/spectrum_n8_refined_final/points/96d22137bfa00dd61c4a3414871e4c63789e3ef548a1a4f64cbc4177deab0d46.json": "5667d1691b2f1b9083d815d4d13cddf22bcc004ad558cea76d7ccbf0baae71f5",
+        "data/driven/spectrum_n8_refined_final/points/96d22137bfa00dd61c4a3414871e4c63789e3ef548a1a4f64cbc4177deab0d46.npz": "972da3bbe587ad27032fea8c7084ca0dccff5d99509c754995ac0fc4dbcb6033",
+        "data/driven/spectrum_n8_refined_final/points/b078a33eded85700c6e8f4c221eaa0be204ad92600712b65f0508e2280adaf99.json": "83ee7a8199693cf51d66b53ac41b35433ecc5fad8a8fa685316159379ea8ed6c",
+        "data/driven/spectrum_n8_refined_final/points/b078a33eded85700c6e8f4c221eaa0be204ad92600712b65f0508e2280adaf99.npz": "5ca15e38044f37149884e6fef55f328bcb7772f4263a77902c72562391ad59b4",
+        "data/driven/spectrum_n8_refined_final/points/44277b8d1edfe4e6d839704b582cd996ff2b41710467b6c5e297d43bfc024adc.json": "64d0331fc22f4721bf2566ed48b83b0bb49d418006b0d17c1a9138a341c6acc1",
+        "data/driven/spectrum_n8_refined_final/points/44277b8d1edfe4e6d839704b582cd996ff2b41710467b6c5e297d43bfc024adc.npz": "02e311dcc0bf4a706bb11438cf3a9abd00a8b6d3a1c1051cb50c2775c3e9020d",
+        "data/driven/spectrum_n8_refined_final/points/c0e6d907fbf808708dcd3cdef6dd2bf83f0041eb9f17921334d6e636e31d5c62.json": "02142ced69425441f770740b092a6fbff981c9827b04903bcba10a670f5144f1",
+        "data/driven/spectrum_n8_refined_final/points/c0e6d907fbf808708dcd3cdef6dd2bf83f0041eb9f17921334d6e636e31d5c62.npz": "c7fd9d6803067c3387313711269b207294ba43a87be69abd3b4c8b13103a5a5a",
+        "data/driven/spectrum_n8_refined_final/points/9bee3d0b40af441a8be049523a9c6a3865def8f4066536d0cb692a0f63add485.json": "2cef0ed10e70a5fb28d45f64feacf19cd63193aeef5c2972eb514fd0b06ed556",
+        "data/driven/spectrum_n8_refined_final/points/9bee3d0b40af441a8be049523a9c6a3865def8f4066536d0cb692a0f63add485.npz": "e4365c9307ed5659e666f81de3c356239b173ea275b963163a9bc482adc9378f",
+        "data/driven/spectrum_n8_refined_final/points/1bb09d1c93f239da82b16097434e030e5ecdf1418693bc807f3a41f9131c233a.json": "14acc04587ae5f337912240211fc4a610061eb90d7deb8bc4e2de7a34c0d53f5",
+        "data/driven/spectrum_n8_refined_final/points/1bb09d1c93f239da82b16097434e030e5ecdf1418693bc807f3a41f9131c233a.npz": "642f81faed0ed54dcce408a1dbf592ca9a4f11e7aedc91890b2cd69ddc4ca73e",
+        "data/driven/spectrum_n8_refined_final/points/e5ebc9ce67c682e46e50a8ab1f9c75c9348ca5eae2e9d6f9505f12b32c0c155a.json": "323d920a2e00c3f158975b90eb6a3db8fbd255aa83afdeed131258fd2f61208b",
+        "data/driven/spectrum_n8_refined_final/points/e5ebc9ce67c682e46e50a8ab1f9c75c9348ca5eae2e9d6f9505f12b32c0c155a.npz": "71dac24665fa05dcac64a4ca11d1ad923323bab3d048b7c46ed96e908ee736fd",
+        "data/driven/spectrum_n8_refined_final/points/35a2a527ced1450d6a38dc17eb91637436126e9a885b7917b089f1a610161fe7.json": "2c94dc4d00328a1546075a2b71b4943b899569f06da4b96505585b32e0dbf20c",
+        "data/driven/spectrum_n8_refined_final/points/35a2a527ced1450d6a38dc17eb91637436126e9a885b7917b089f1a610161fe7.npz": "e047f0c2d10cc39a8645f457df1b6ef5eef898ad84efc3347de7ff6f9d7043b9",
+        "data/driven/spectrum_n8_refined_final/points/723e58b4181f6915bd734ad344a3d6b8df132fc406d6cae4f1951195b547d87d.json": "401dc305edcb8bcb5c4f595fca92d2eb37f208e2da07747cd1eea362bd10632a",
+        "data/driven/spectrum_n8_refined_final/points/723e58b4181f6915bd734ad344a3d6b8df132fc406d6cae4f1951195b547d87d.npz": "6c9de5a2427dd18e8fd28d0208540fa5f3c575d70c010b4c62d4c654695c05e4",
+        "data/driven/spectrum_n8_refined_final/points/ad2e5339b01967e11a39176ab54047af443aee1b0cc838d1d47406cced2fadff.json": "f51754e0138db50600f711e46670cd7db8f78537279dae6d707d2a6047454c92",
+        "data/driven/spectrum_n8_refined_final/points/ad2e5339b01967e11a39176ab54047af443aee1b0cc838d1d47406cced2fadff.npz": "3861ff4d43b3cd90302230ba52480ea5ab297e76307cc657caa6cb636fb5c42f",
+        "data/driven/spectrum_n8_refined_final/points/1e6f820d5c85c880e43c0c0f6d7d577a1a19e86f379f6f25b8c265dfcc0fe708.json": "12c86da7002201069fa30460022b7216a9879cbb3c1b1e2ef8096f4e4b236ee2",
+        "data/driven/spectrum_n8_refined_final/points/1e6f820d5c85c880e43c0c0f6d7d577a1a19e86f379f6f25b8c265dfcc0fe708.npz": "de742f6369e83bce9f5e5274c5852cf05e291a49f260435d50ad47c0cfbb1b44",
+        "data/driven/spectrum_n8_refined_final/points/b37d917df5bfccbe0da33c95cfad4ff0c5e10fc4e6802cab8d55f416eb3471e1.json": "c3a3f55c6c3fe9b33cdc543fc4e80fb2367f646258546f24cd19fa8a4b0d45e2",
+        "data/driven/spectrum_n8_refined_final/points/b37d917df5bfccbe0da33c95cfad4ff0c5e10fc4e6802cab8d55f416eb3471e1.npz": "0f2d34ba44f575764b7fec3b484f3415885746215a6517f5df2920bdbfb7e36c",
+        "data/driven/spectrum_n8_refined_final/points/ada55821ab92883627648da99cc84e77fdc924c33f795f83aeb9bb44df05f2ce.json": "ee63243a146db5dbc50a0e157bc06d50ce3f682b21096137c13bf70ff1237214",
+        "data/driven/spectrum_n8_refined_final/points/ada55821ab92883627648da99cc84e77fdc924c33f795f83aeb9bb44df05f2ce.npz": "8370e1321e55daa465b5f4843f069019c05c3a30ba816ec9ecb1d9cf7b534973",
+        "data/driven/spectrum_n8_refined_final/points/ddc80d74f9a4e8f37d43c24b31cdf7f24d0567bf7176786adebaa50c62d6e038.json": "2719c50ed227334c3b5d81fe64b59f2b0975704274cd03de63b1323e4d42b0f4",
+        "data/driven/spectrum_n8_refined_final/points/ddc80d74f9a4e8f37d43c24b31cdf7f24d0567bf7176786adebaa50c62d6e038.npz": "ea4a9989f28b792c68fa75368f5b2fa3a344b1bf0daff1e143130623b82be3a9",
+        "data/driven/spectrum_n8_refined_final/points/4dc11257bf688ca8c551c84ba4c0ca82e2907b1c16ba15678a7c18c0ec20fe63.json": "e850c1654c58700bd22c073874e86810e8a436c79f455999a6174bc07dc149a0",
+        "data/driven/spectrum_n8_refined_final/points/4dc11257bf688ca8c551c84ba4c0ca82e2907b1c16ba15678a7c18c0ec20fe63.npz": "db0ff42e395183667d910681e97389e9897c9b64961400c5ef787e7e6808276a",
+        "data/driven/spectrum_n8_refined_final/points/41b3f5a27990b9b510f77601b96202cf857604b9790f60950693d1d4839c2fa6.json": "5e5f0c77b92b5cafd75b395b4c48e4f7db16becb4ff55f39809cf2b9cd634c56",
+        "data/driven/spectrum_n8_refined_final/points/41b3f5a27990b9b510f77601b96202cf857604b9790f60950693d1d4839c2fa6.npz": "cf94375bd972403cde0879054ff7dc51f24b6dc27db42e7a9e9d151d9aa56ede",
+        "data/driven/spectrum_n8_refined_final/points/eaa9cff4918df3ab00ab80bdb24745d01fdada01485cb4b908fb60a7ed9aa0e1.json": "f6537bf94e50da8d84b35b138ced2a363e8794898f1d41f8f53905e6a5eb3bbf",
+        "data/driven/spectrum_n8_refined_final/points/eaa9cff4918df3ab00ab80bdb24745d01fdada01485cb4b908fb60a7ed9aa0e1.npz": "38f5139a7dca0c2eb3c5c6653779f2aab12de01dbdaea75beb57ab24b3f6f9db",
+        "data/driven/spectrum_n8_refined_final/points/7afac4c0a7dc41f2c8b77d23f19df2f610f077fe14e2fbf1152fea5878f477f6.json": "57ff5c6cc5ab82883f278e83ed223b98f51c9184863459f6a3f1ad6c35a12cd3",
+        "data/driven/spectrum_n8_refined_final/points/7afac4c0a7dc41f2c8b77d23f19df2f610f077fe14e2fbf1152fea5878f477f6.npz": "f9dc825f5f4ed57fdb47df31fc87c31d1d32401f6cbd1677292ba951c1fa4b9e",
+        "data/driven/spectrum_n8_refined_final/points/550eabab0a4e8de5cf043161f592fdf8caeb4d1c91c33a36ca66866f8e5e801c.json": "795b023a5a77da675d68a77614275fc8f12484c81c81705a3ad11fafc78de3a6",
+        "data/driven/spectrum_n8_refined_final/points/550eabab0a4e8de5cf043161f592fdf8caeb4d1c91c33a36ca66866f8e5e801c.npz": "520481503d3dc7442c6a43b6431edd7b1ebc57c1079da01a5d65adc3813b6962",
+        "data/driven/spectrum_n8_refined_final/points/3c19c8a656846dc6ef83fc6076037d5ba8ce331e44b2715c08d398c78c02e68e.json": "26b48dfe5fe46222fbff0ccd87382470050f9d7bcdca603c303cdd29fdc363fe",
+        "data/driven/spectrum_n8_refined_final/points/3c19c8a656846dc6ef83fc6076037d5ba8ce331e44b2715c08d398c78c02e68e.npz": "4fbdd9a79a9e96da434b79a4a49b84b3a1467758ddc74476705c420b6f801e00",
+        "data/driven/spectrum_n8_refined_final/points/d10f8e4b681e4ea6cdc24d6f0e057cf6e0de72f2453e5a6993222c4b7df32b1e.json": "99c2fd89699223413a7a46b6831417d19addcebf9b803a825559e367f9442a7e",
+        "data/driven/spectrum_n8_refined_final/points/d10f8e4b681e4ea6cdc24d6f0e057cf6e0de72f2453e5a6993222c4b7df32b1e.npz": "0e7245d79a2030358d36906c6bdec06a849cfaef2a7525e6c34535e54392752d",
+        "data/driven/spectrum_n8_refined_final/points/8af0cab31eade796380e44a76324aa16c520099c7eb8ae01fa7d7b528a41e19c.json": "cb58b15a67229eb6499ea4c5d583f24e4947d79bf11b06890e1aff74353c208e",
+        "data/driven/spectrum_n8_refined_final/points/8af0cab31eade796380e44a76324aa16c520099c7eb8ae01fa7d7b528a41e19c.npz": "1b377052bdb19227a8e636b222425bf0e0772ed60ffe5c35c7f3f8dc9c709a72",
+        "data/driven/spectrum_n8_refined_final/points/f69002a061e22c60affa84f12083587f5d7a32dad919085b0fa0e10802b047a9.json": "52665e1fbb9ef74a726f1bbf0d7dccc692f7fae5c33ba0f99377df94ff3ada0d",
+        "data/driven/spectrum_n8_refined_final/points/f69002a061e22c60affa84f12083587f5d7a32dad919085b0fa0e10802b047a9.npz": "7407ab6d762bc1ca0694fa27c5102917834c4e6787a3bd6f311b74139e15d7a1",
+        "data/driven/spectrum_n8_refined_final/points/8b2c3b44c5d05b77edcbbe07d4023c79aeacf80585fc8959cfb1f3093626e7ce.json": "858803878c44b8301012698e503c0276f840029aa1cd46441866608d45a50745",
+        "data/driven/spectrum_n8_refined_final/points/8b2c3b44c5d05b77edcbbe07d4023c79aeacf80585fc8959cfb1f3093626e7ce.npz": "94b65a82736a2db27a98a173abded948ad63d998b50f1122c192bc00e650f43b",
+        "data/driven/spectrum_n8_refined_final/points/c14d09978e10533056535d56e35a03bfea1089f6973ec84a9b6af4dbbd7e45fe.json": "bf36c452efab653bae39bdbb49fd1679af5e4249b8029d4767e4c42a2455248a",
+        "data/driven/spectrum_n8_refined_final/points/c14d09978e10533056535d56e35a03bfea1089f6973ec84a9b6af4dbbd7e45fe.npz": "99b8a86a072da7cb0659f071cde21e45a6ce20ade400c822c46fd7c94fd19941",
+        "data/driven/spectrum_n8_refined_final/points/793eda687a04c326271e3997407793ed7ba984218c35c664ed71b6d9c236cbf7.json": "31175be653eaaa231b471e37ae55e5e5709caac1edaf286d0273e8484cf88757",
+        "data/driven/spectrum_n8_refined_final/points/793eda687a04c326271e3997407793ed7ba984218c35c664ed71b6d9c236cbf7.npz": "f09a81f3b0ac0e3871eea43a2bdbce174ce14f74fb02d1f6ea0792af11f60dcb",
+        "data/driven/spectrum_n8_refined_final/points/7123534553ad329b0695e4dde77652df8c6f93dc3269d04a4162f8a601975e60.json": "3e12023441c16cdc2cf40ad609a60037e11384a55a7f4d85c34d739caa9ce1c9",
+        "data/driven/spectrum_n8_refined_final/points/7123534553ad329b0695e4dde77652df8c6f93dc3269d04a4162f8a601975e60.npz": "96ed9c22e509063f837aa4915710249eec45035d3fabbffc0ac4b08a250dec2f",
+        "data/driven/spectrum_n8_refined_final/points/ae015dba9fca9e95d721c3a6ef13d8173dc94e23ee7677c363bdd310dbd81e9e.json": "d4d2f97ce7ffd454f6a39b09cdcfaf85b3652572dc8b90b39ccdeba0732544bf",
+        "data/driven/spectrum_n8_refined_final/points/ae015dba9fca9e95d721c3a6ef13d8173dc94e23ee7677c363bdd310dbd81e9e.npz": "a4f88bb9d7bcfe5b8fd2b7bc6c2c36bb743ca7caa235fc437ca4cd6e566d6aae",
+        "data/driven/spectrum_n8_refined_final/points/5328926a471e93ccd5e291136eec8e382367c467129cb337c472aa0517aeade8.json": "1b8c40b68f73252785da485544a5473a95a57b89d82903be5d7debc77129ca15",
+        "data/driven/spectrum_n8_refined_final/points/5328926a471e93ccd5e291136eec8e382367c467129cb337c472aa0517aeade8.npz": "6df5694b4bfe0d9604a473d664890bc975b1aede7f85dfaba86c40df08290eb6",
+        "data/driven/spectrum_n8_refined_final/points/06fc88be2ed59784ad6902d8381b227f337e4c00536d0f9b3d83b042e9d3d7a3.json": "cba94a21aa969c79c71ba3602290128fd2a45ebb5534bb2b164f99864c99b5a3",
+        "data/driven/spectrum_n8_refined_final/points/06fc88be2ed59784ad6902d8381b227f337e4c00536d0f9b3d83b042e9d3d7a3.npz": "4aecef770fbe9790b2753c5d2eec90d075677b2a08fc19f093ea59ba69f3b4dc",
+        "data/driven/spectrum_n8_refined_final/points/f6e3bda4fe91d57b1d61a491cc4bb458ac634cd65f24f53f24feff3010383a90.json": "88c1a8a9058c3d70c34ceed31d42680c0bf065afbe1529ad46a79a6b424d4d82",
+        "data/driven/spectrum_n8_refined_final/points/f6e3bda4fe91d57b1d61a491cc4bb458ac634cd65f24f53f24feff3010383a90.npz": "e84ecce90a1f4c9e73d1b68d72b42b48da9af6edfa68a799328c8aedf4255af2",
+        "data/driven/spectrum_n8_refined_final/points/fa3710923459f8bbf2545a3b2c2895a295b2241cd3cf80ea429aa152e2a27a02.json": "bb0ae45d6556112ac5c98799235ef65fc7c51930e660da5a86f893d3a7a1a065",
+        "data/driven/spectrum_n8_refined_final/points/fa3710923459f8bbf2545a3b2c2895a295b2241cd3cf80ea429aa152e2a27a02.npz": "a5c29603dca97e5e480e28657209f75aea5ff2d787a1cea4e939d89ed04d5ff4",
+        "data/driven/spectrum_n8_refined_final/points/2165f481252bbab4544d08bf4968acbbb779b5bf1bcd9463c6613ffbe6dcb2d4.json": "b26d795f217371f8a13a6306af166e6fa1636107a074eafeba1716a6dc92763f",
+        "data/driven/spectrum_n8_refined_final/points/2165f481252bbab4544d08bf4968acbbb779b5bf1bcd9463c6613ffbe6dcb2d4.npz": "346c6c0b69b761101476c36d019d86b48f44c690c0406f2b764003a6f6f9e012",
+        "data/driven/spectrum_n8_refined_final/points/05ca84f88b8d735c8e1bbc53d2d8d2d10924bf0a9f50196de1f536a325d90cc3.json": "e08f7f9cae4ad4e15db6179cdba2cbf81f98ada10b74fe10d008a5f0401a85df",
+        "data/driven/spectrum_n8_refined_final/points/05ca84f88b8d735c8e1bbc53d2d8d2d10924bf0a9f50196de1f536a325d90cc3.npz": "cd58e106c5c6ead85ba32721eef563245e258f22c36cdcf843e86a31d0574e11",
+        "data/driven/spectrum_n8_refined_final/points/e61da8818d4316e34e1d27b77461776d9110c284e826e5f8858d67130681d724.json": "f96ff74f52059e61a23c09469183bbe0b238c4395dcef708f48b3dc106a0b55d",
+        "data/driven/spectrum_n8_refined_final/points/e61da8818d4316e34e1d27b77461776d9110c284e826e5f8858d67130681d724.npz": "f5968529bcdf6af1c1b4e2e092b1173825e079ce1245f837127798467bb6cf50",
+        "data/driven/spectrum_n8_refined_final/points/16043b7988cb167eda2015896dc5dee3da74a45b71993f4d3c7d4b42a229ee81.json": "9eae980749e1d5632b412a285ced83af3d70dd2f048ab60abc8f97f9c676a881",
+        "data/driven/spectrum_n8_refined_final/points/16043b7988cb167eda2015896dc5dee3da74a45b71993f4d3c7d4b42a229ee81.npz": "3abc42fd85c2b7353ef3bbcd9fcc0ffd7a9cca2e684d14a01e53d2ddb3dd9953",
+        "data/driven/spectrum_n8_refined_final/points/7a4b2b5f2fb6bcac47262e0e5208b582542ae9d794f6b3f193e15010e3fc57f3.json": "a11ca7ca78d3790d52046d31dc65c449a3d36a364fc6846fbe85ea49bd04aec2",
+        "data/driven/spectrum_n8_refined_final/points/7a4b2b5f2fb6bcac47262e0e5208b582542ae9d794f6b3f193e15010e3fc57f3.npz": "8d06468912b501cf3fb6f73b69cae40d0a7a773746fa42c867f18675d65f45c1",
+        "data/driven/spectrum_n8_refined_final/points/7b2a586f87fb935c8e14f3fd38ec4c21df30961f97378ea43333cbc32951ac55.json": "0154944c82e71e53416461528da4f5257e8188ba2f55721cf98c3dfc418f3253",
+        "data/driven/spectrum_n8_refined_final/points/7b2a586f87fb935c8e14f3fd38ec4c21df30961f97378ea43333cbc32951ac55.npz": "0e654b3e44b54062984f0b5d9b1417e66dbd84d366179b0d84b1a07df02b3e24"
+      },
+      "outputs_sha256": {
+        "01_accessible_states.png": "c33f09f9cc990d6028326c3e4d2f28e580ea98f75f6627fe12bfb617fae01511",
+        "01_accessible_states.pdf": "7ee9e8c1d7c53ebe1785a1f770090b4f1e5c4c877668f3acb6c75102128a075e"
+      }
+    },
+    "02_weak_probe": {
+      "question": "Does the weak probe recover the accessible resonance and quadratic scaling, and where does that approximation fail?",
+      "selection": {
+        "resonance": "all frequencies at weak amplitude 0.01",
+        "scaling": "all three amplitudes at omega/g=2.658, both durations",
+        "departures": "all amplitudes; both measured and predicted Y > 1e-8",
+        "amplitude_slopes": {
+          "32.0": 1.9996103318916323,
+          "64.0": 1.9985000452051533
+        }
+      },
+      "inputs_sha256": {
+        "data/driven/case_b_zero_n8_final/metadata.json": "a91a2cbfa7cec06337f6a0235a2f4d0a4cf0045fa938dd56e95441b481ace34a",
+        "data/driven/case_b_zero_n8_final/summary.json": "9db8599337066c29f0e6dffd3e978c29355b8d2999e6b7ab89cf7422b6c1374a",
+        "data/driven/weak_checks_n8_v2/metadata.json": "dcdc84167e171773e79f20b1b631d1c381c35299612b64797f3dbfe4f15fb007",
+        "data/driven/weak_checks_n8_v2/summary.json": "6a3c64d4b05ff9719178eaeb07c3d37d6b3dfe9a4f9e5f807f4ddb455dd4427b"
+      },
+      "outputs_sha256": {
+        "02_weak_probe.png": "74a644cfcbd0787d2d36338c8ced6e040297d07470c11d2c1f621279acdf945f",
+        "02_weak_probe.pdf": "a95470250110695235f109d4dd0e31661af16582cdd11a0212c48caff83b56d4"
+      }
+    },
+    "03_two_pulse_result": {
+      "question": "How much excitation and energy exceed the separate-pulse comparison?",
+      "selection": {
+        "rows": "all 150 main-scan points",
+        "ratios": "omitted; absolute excitation and signed differences are primary"
+      },
+      "inputs_sha256": {
+        "data/driven/case_a_n8_final/metadata.json": "312a977e12de306ffd01a9500cea75118d8f2d3d27c3592f5a7e1f0c3354ed5d",
+        "data/driven/case_a_n8_final/summary.json": "307cc29b5e159b6b5d3272a132e4588f4f339d978b76294f0cce1c178c15d7fa"
+      },
+      "outputs_sha256": {
+        "03_two_pulse_result.png": "5ea84b516f541344eff3eb90f243b1858edc3fc7e7621da4247fe7ad67c21a86",
+        "03_two_pulse_result.pdf": "c0bbee98acb7bc783a2fb83a4273a5f2a4988abb7a9a1836edb3fcadf0a2e3a2"
+      }
+    },
+    "04_matched_controls": {
+      "question": "Can peak height or input budget explain the change, and do timing and sign matter?",
+      "selection": {
+        "weak_amplitude": 0.01,
+        "widths": "all saved at that amplitude",
+        "delay_and_sign_width": 0.5,
+        "budget": "input integral, not absorbed energy"
+      },
+      "inputs_sha256": {
+        "data/driven/controls_n8_final/metadata.json": "5e28f8213dba9a1e532c44cbf70b1fcda37823c551082a9d8adb3fd3332cf49a",
+        "data/driven/controls_n8_final/summary.json": "8aa2c03e73a1838683ce325bb26caf5c853ff22ecc107b6f31add1b453b1d1b1"
+      },
+      "outputs_sha256": {
+        "04_matched_controls.png": "490b76d4d81c0aa58e1bdb89658853e978bbeb55974eb1414b172a35e751a110",
+        "04_matched_controls.pdf": "8f31402504918858bdc509f4bb95cc4076afcd7f54157b197a8cd5e9499b01d9"
+      }
+    },
+    "05_response_and_states": {
+      "question": "Does the strong-background response predict the change, and which states contribute to its signed excess?",
+      "selection": {
+        "weak_amplitude": 0.01,
+        "population_width": 0.5,
+        "state_count": 69,
+        "state_axis": "full excitation energy relative to the zero-field neutral ground",
+        "state_excess_sums": {
+          "0.6": 1.9715326595764924e-06,
+          "1.0": 0.00014502149512299055
+        },
+        "shading": "1e-8 reference floor; not a per-state confidence interval"
+      },
+      "inputs_sha256": {
+        "data/driven/controls_n8_final/metadata.json": "5e28f8213dba9a1e532c44cbf70b1fcda37823c551082a9d8adb3fd3332cf49a",
+        "data/driven/controls_n8_final/summary.json": "8aa2c03e73a1838683ce325bb26caf5c853ff22ecc107b6f31add1b453b1d1b1",
+        "data/driven/spectrum_n8_refined_final/metadata.json": "846598bc04f564373d9bd4673350132c826ace5f23e6e1256ef6eab0b88f3ed1",
+        "data/driven/spectrum_n8_refined_final/summary.json": "0648a46cd33da9efb8461bee85fb2df9ce662f60ec899f152c7413805ec4a9ab",
+        "data/driven/spectrum_n8_refined_final/points/b81148ef11eeaacb2c1504ba9423f5fc7ec792c38236acf90c1e54aa1638e23d.json": "09f97107c56f350e275a7b415782ded443b289a90483d60e5425d7ef2198657b",
+        "data/driven/spectrum_n8_refined_final/points/b81148ef11eeaacb2c1504ba9423f5fc7ec792c38236acf90c1e54aa1638e23d.npz": "92329d4a319fb01b43ca57bd0423a5bd69966b8d18830982a5c6296414631ad5"
+      },
+      "outputs_sha256": {
+        "05_response_and_states.png": "764dd7a63dd7196b04fb8c16f922986cfbb82ed8cadd288d244a9d964f6f476a",
+        "05_response_and_states.pdf": "d9846093a9124b96a615707b482bc271bb75cfc1b8e3bfa9c9b12f966703ee41"
+      }
+    },
+    "06_background_preparation": {
+      "question": "When do ramped backgrounds enhance or suppress the probe, and was their ground state prepared?",
+      "selection": {
+        "backgrounds": [
+          0.6,
+          1.0
+        ],
+        "ramps": [
+          10,
+          20
+        ],
+        "frequencies": "all six coarse probe frequencies",
+        "limit": "These are ramped states, not assumed stationary ground states; connecting lines guide the eye."
+      },
+      "inputs_sha256": {
+        "data/driven/plateau_n8_final/metadata.json": "ff35175c20924f0acad68d74621dea88e70d87e748659e56e3a8be81e9e8bb79",
+        "data/driven/plateau_n8_final/summary.json": "63ac14dc88658287364696a443a7fad3d36a163e95ff9dd7a51cfe610c0f5218"
+      },
+      "outputs_sha256": {
+        "06_background_preparation.png": "d281012514ae616a58e1df4ea5457405b93656cd31ea83a08e0289b098b9c35d",
+        "06_background_preparation.pdf": "7136a3a377ff33cdfb61a7868520627b04e9e1f465c526ee56322f3a7d631120"
+      }
+    },
+    "07_size_dependence": {
+      "question": "Does the selected effect persist at N=12,16, and is there a central spatial contribution?",
+      "selection": {
+        "rows": "all nine fixed-protocol size points",
+        "strong_peak": 1.0,
+        "weak_amplitude": 0.01,
+        "spatial_width": 0.5,
+        "spatial_definition": "vacuum-subtracted occupation(both) - occupation(strong) - occupation(weak)",
+        "limit": "fixed lattice spacing; only the strong=1 protocol was tested across sizes"
+      },
+      "inputs_sha256": {
+        "data/driven/size_case_a_final/metadata.json": "63fea9770dd5e72a8bcfdb72acbdef6b3a9ce445e606c8c6732ee286b5784bc6",
+        "data/driven/size_case_a_final/summary.json": "0a8af73bc2fd04f648c3d4b03ffa75a06bd509cda265c7e508a7c5d5562f02e6"
+      },
+      "outputs_sha256": {
+        "07_size_dependence.png": "63ca524b680ca8b5ba1b3762ced93a5456cfb24980f81e16f7ddfc99c799fedb",
+        "07_size_dependence.pdf": "33ece2ff1f4ec634a733408f05bd72e2a04f7455190c65bc3e8142f8f39cbfd8"
+      }
+    },
+    "08_numerical_checks": {
+      "question": "Is the representative excess larger than independent-method and pulse-tail differences?",
+      "selection": {
+        "strong_peak": 0.6,
+        "weak_amplitude": 0.01,
+        "width": 0.5,
+        "D_Y": 1.9715326595760134e-06,
+        "reported_D_Y_uncertainty": 5.57319342080125e-10,
+        "limit": "Observed differences are numerical checks, not rigorous error bounds; the main scan retains its own refinements."
+      },
+      "inputs_sha256": {
+        "data/driven/controls_n8_final/metadata.json": "5e28f8213dba9a1e532c44cbf70b1fcda37823c551082a9d8adb3fd3332cf49a",
+        "data/driven/controls_n8_final/summary.json": "8aa2c03e73a1838683ce325bb26caf5c853ff22ecc107b6f31add1b453b1d1b1",
+        "data/driven/controls_n8_final/points/c60f678c006ac834f21464e4194fc147a282f9efffbf607c6413795a65e73724.json": "602943084b5b2ecfbc04b6914d610e4dc1b306c940265680f589400cf4daf13a",
+        "data/driven/controls_n8_final/points/c60f678c006ac834f21464e4194fc147a282f9efffbf607c6413795a65e73724.npz": "393652794069dbc10e2823ea54ae0dc06fffcd4b72dc9108d7c6bc8f2fd91feb",
+        "data/driven/independent_case_a_final/metadata.json": "ef254085894a507e7017f691dac272f88575c4b8b4d951f16b2e798f0b65a6f0",
+        "data/driven/independent_case_a_final/summary.json": "0dba84928f62b688183269721879c33f2dd312e3d4e0bc110ccf1ec6a976ce5d",
+        "data/driven/independent_case_a_final/points/eaf543f6e7466800c52323c88c9febeb210ae2ac1e1296ca94cb838aedabeee4.json": "d5f36dfa6916e046e36dd2db985b5ee24baaffa44f5dac9817c0ba734ae08fb4",
+        "data/driven/independent_case_a_final/points/eaf543f6e7466800c52323c88c9febeb210ae2ac1e1296ca94cb838aedabeee4.npz": "c7dadd6a3190981c7c71a94aa35a0dbdb2bdce0ce4faa40614ff49670d6aa1df",
+        "data/driven/independent_case_a_final/points/13bdae1efd21cd6bbd2d714891ab07cc6e2b4f878be6ca4b7f51f829a28b95fa.json": "a115c03b4987312d68daa2d2546e28d5efd165ddf06a6e619d8459b2611840b4",
+        "data/driven/independent_case_a_final/points/13bdae1efd21cd6bbd2d714891ab07cc6e2b4f878be6ca4b7f51f829a28b95fa.npz": "4185c37ab07809b593ab7fd805737f2f09e5ecbfa5d461e23c4dd0f06e538064",
+        "data/driven/independent_case_a_final/points/482c351540d91d3b7d71888e93f3b92f554a31a2b2188eb7f084067076724b9f.json": "339053f597afff07a7676e7ed64f2922b2516814d740d463ed905c35714e42b4",
+        "data/driven/independent_case_a_final/points/482c351540d91d3b7d71888e93f3b92f554a31a2b2188eb7f084067076724b9f.npz": "8f161d5b182eacad84c7721d6e57c5e173915c8c65e4a2239f8abaa3ef246050",
+        "data/driven/independent_case_a_final/points/dbdf7cdce400f8195b97e224c1b9b4b55dcf80a0b0e6ed51e80de4b6b5ed8d16.json": "560d600c52c671fc49d83c10ce3ec7f905560f43c054a057c39e4ce6b5514f24",
+        "data/driven/independent_case_a_final/points/dbdf7cdce400f8195b97e224c1b9b4b55dcf80a0b0e6ed51e80de4b6b5ed8d16.npz": "4de7880cc5ee3fedcf6948fff546513ec8cf47cffe5cd0584ac92d5e697b462d",
+        "data/driven/independent_case_a_final/points/8801487e4a61bd8afa672eab35dcc2cec2960301580a05db7fd5004510c2ef77.json": "cedcc57365a371a5eabbcd1c229202edfd4145c7e45449aca44d942f6a4b7c6b",
+        "data/driven/independent_case_a_final/points/8801487e4a61bd8afa672eab35dcc2cec2960301580a05db7fd5004510c2ef77.npz": "fb4d46fe5e7bdbe0c5fc73077c0dc8a43ab302c949b6f675274611ef6984b009",
+        "data/driven/independent_case_a_final/points/a784617790460ecf9117f99895c3da8c0e5184138a01566f06f0cbbee2e44e94.json": "de4664987ca7076d0f93dca72f4444316f27c8c4f68a77b1e8de4c9f67dc21ab",
+        "data/driven/independent_case_a_final/points/a784617790460ecf9117f99895c3da8c0e5184138a01566f06f0cbbee2e44e94.npz": "0b1c7648a6affd088427d16e802b0402774e8c9eba73b27da9e90b16c03a22f8",
+        "data/driven/controls_n8_final/points/39585d331f43a5c708a620356e9a7921cbdaa8263491dd768aef0eb3c73daddd.json": "dc68660b7935b7f128e6e6cd8221fcda2bbeafc79002f008dec4563d7435c14d",
+        "data/driven/controls_n8_final/points/39585d331f43a5c708a620356e9a7921cbdaa8263491dd768aef0eb3c73daddd.npz": "9f325287dc0d880925d0ec0c9d89eae8b55f736645db4386980d7297cf593b6f",
+        "data/driven/controls_n8_final/points/1d21fe50ebe47da2a9860627075eb9c1963b32a8e33e861f3508cb1973988641.json": "fa8b75ba32bcfe731998181dc633baffd0b89e74ed8637304980d2dff004a821",
+        "data/driven/controls_n8_final/points/1d21fe50ebe47da2a9860627075eb9c1963b32a8e33e861f3508cb1973988641.npz": "67b32544dc72a640c882f2229cf271000fa8e22fc5b5de4560927182f9b08d95",
+        "data/driven/controls_n8_final/points/a4524a588796ca6b54871fc350d2ab7dcff670632381780b0c1fcf3e8e0decdc.json": "82acf1cb6654216206424f3e609562c3c6cefccbdaa996703a53ddb6beffcc6f",
+        "data/driven/controls_n8_final/points/a4524a588796ca6b54871fc350d2ab7dcff670632381780b0c1fcf3e8e0decdc.npz": "39c83214441777885a2786506d2bbb1fa46d43f7d309fe8bffce4337b18ffa87",
+        "data/driven/controls_n8_final/points/b502f0ada9d49796eb7bbf2374e8809ad5f66500224b302611cdb1bf86b1a3d5.json": "983b188fabfd1a2cf77f219fe61a9822ce06e71b8c50e1aac498016ed0d5d20f",
+        "data/driven/controls_n8_final/points/b502f0ada9d49796eb7bbf2374e8809ad5f66500224b302611cdb1bf86b1a3d5.npz": "b96e4fb7264778c1e8cba487cd83164fd00cae4f82b53f91e728a7845cf1fd66",
+        "data/driven/controls_n8_final/points/2f0c4485b2303be79128cdbe6520dc825b6dceab648137571f1aea314be39529.json": "bd8d980ddadbcc836f8695c09564595c25ddc78d0c838ead5c32d96dce94f153",
+        "data/driven/controls_n8_final/points/2f0c4485b2303be79128cdbe6520dc825b6dceab648137571f1aea314be39529.npz": "e37840ab2cb10ff1fa6825900c020c901ea6c5c77b8a06e066c76c5ec548208e",
+        "data/driven/controls_n8_final/points/b8b5d1f5ddd7f6de41b12a7b2fbd3dcd80e0960d5ae41cdd42a2ac8470c0cf09.json": "e732efdca718d3a677e925de1463832ea23e0d6121c1dffa7f21bec28c013a29",
+        "data/driven/controls_n8_final/points/b8b5d1f5ddd7f6de41b12a7b2fbd3dcd80e0960d5ae41cdd42a2ac8470c0cf09.npz": "befac706b513c26f23cd304948ce29445641a559de1c609d9b9185d4233b482f"
+      },
+      "outputs_sha256": {
+        "08_numerical_checks.png": "7225c55c517e5863a663e700a021f88baa167d05e347e019b440ffa501dc9ec6",
+        "08_numerical_checks.pdf": "3611f6b5d239613aa3767a4b6d828716267b3891dd68b8088a7411c79a7a3d85"
+      }
+    }
+  }
+}
